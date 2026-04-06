@@ -67,6 +67,10 @@ export const metadata: Metadata = {
       "Premium PPF, wraps, tint, ceramic coating, and detailing in Raleigh, NC.",
     images: ["/images/home/hero/background.jpg"],
   },
+  icons: {
+    icon: "/images/branding/Logo.png",
+    apple: "/images/branding/Logo.png",
+  },
   robots: {
     index: true,
     follow: true,
