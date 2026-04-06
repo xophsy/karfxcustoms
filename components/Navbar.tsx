@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/#services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
 ];
@@ -30,7 +30,7 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "fixed left-0 right-0 top-0 z-50 transition-all duration-500",
+          "fixed left-0 right-0 top-0 z-50 overflow-visible transition-all duration-500",
           scrolled
             ? "border-b border-gold-500/20 bg-black/70 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-2xl"
             : "border-b border-white/5 bg-gradient-to-b from-black/50 to-transparent backdrop-blur-md"
@@ -38,11 +38,11 @@ export default function Navbar() {
       >
         <div className="absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-gold-500/80 to-transparent" />
 
-        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-6 overflow-visible">
           <Link
             href="/"
             aria-label="KAR FX Customs home"
-            className="relative z-10 shrink-0"
+            className="relative z-10 shrink-0 self-start"
           >
             <motion.div
               whileHover={{ scale: 1.12 }}
@@ -54,7 +54,7 @@ export default function Navbar() {
                 alt="KAR FX Customs"
                 width={160}
                 height={160}
-                className="h-14 w-14 object-contain md:h-16 md:w-16"
+                className="h-32 w-32 object-contain md:h-40 md:w-40"
                 priority
               />
             </motion.div>
@@ -131,7 +131,7 @@ export default function Navbar() {
 
           <div className="mt-8 flex flex-col gap-3">
             <Link
-              href="/services"
+              href="/#services"
               onClick={() => setMenuOpen(false)}
               className="btn-ghost text-center"
             >

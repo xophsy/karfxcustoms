@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Phone } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/business";
 import { useInViewOnce } from "@/lib/useInViewOnce";
 
@@ -33,21 +34,20 @@ export default function FinalCTA() {
       >
         <div className="mb-6 flex items-center justify-center gap-4">
           <span className="block h-px w-8 bg-gold-500/40" />
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-500/60">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">
             Ready To Start
           </span>
           <span className="block h-px w-8 bg-gold-500/40" />
         </div>
 
         <h2 className="mb-5 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
-          Tell us about the vehicle,
+          Your Build
           <br />
-          and we&apos;ll point you to the right path.
+          <span className="text-gold-gradient italic">Starts Here.</span>
         </h2>
 
         <p className="mb-10 text-base leading-relaxed text-white/60">
-          Want to see more first, or ready to talk through your vehicle? Use
-          whichever path is easier.
+          Tell us about your vehicle and we&apos;ll get back to you within 24 hours on weekdays.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
@@ -55,13 +55,14 @@ export default function FinalCTA() {
             href="/quote"
             className="btn-gold"
           >
-            Get a Free Quote
+            Get a Quote
           </Link>
           <a
             href={BUSINESS_INFO.phoneHref}
-            className="btn-ghost"
+            className="btn-ghost inline-flex items-center gap-2"
           >
-            Call {BUSINESS_INFO.phoneDisplay}
+            <Phone size={13} strokeWidth={2} />
+            {BUSINESS_INFO.phoneDisplay}
           </a>
         </div>
 

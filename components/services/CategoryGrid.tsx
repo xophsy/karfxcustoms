@@ -51,7 +51,11 @@ function ServicePanel({
             sizes="60vw"
           />
         )}
-        <div className="absolute inset-0 bg-black/75" />
+        <motion.div
+          className="absolute inset-0"
+          animate={{ backgroundColor: isExpanded ? "rgba(0,0,0,0.20)" : "rgba(0,0,0,0.70)" }}
+          transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
+        />
       </div>
 
       {/* ── Collapsed — vertical name ──────────────────────────────────────── */}
@@ -73,15 +77,19 @@ function ServicePanel({
 
       {/* ── Expanded — full content ────────────────────────────────────────── */}
       {isExpanded && (
+        <>
+          {/* Left-edge scrim — gives text a dark backing without affecting the image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent pointer-events-none" />
         <motion.div
-          className="absolute inset-0 flex flex-col justify-center px-10 md:px-12"
+          className="absolute inset-0 flex flex-col justify-center px-10 md:px-12 [filter:drop-shadow(0_1px_6px_rgba(0,0,0,0.9))]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.35, delay: 0.18 }}
         >
           {/* Tagline */}
           <motion.p
-            className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500/70"
+            className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-400"
+            style={{ textShadow: "0 1px 4px rgba(0,0,0,1), 0 0 12px rgba(0,0,0,0.9)" }}
             initial={{ x: -24, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.25 }}
@@ -92,6 +100,7 @@ function ServicePanel({
           {/* Category name */}
           <motion.h2
             className="font-display text-4xl font-semibold text-white mb-5 md:text-5xl"
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8)" }}
             initial={{ x: -32, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.45, delay: 0.3 }}
@@ -131,7 +140,7 @@ function ServicePanel({
                 }}
               >
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />
-                <span className="text-base text-white/80">{s.name}</span>
+                <span className="text-xl text-white">{s.name}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -164,6 +173,7 @@ function ServicePanel({
             </motion.span>
           </motion.div>
         </motion.div>
+        </>
       )}
     </motion.a>
   );

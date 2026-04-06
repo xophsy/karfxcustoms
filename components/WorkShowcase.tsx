@@ -145,13 +145,14 @@ export default function WorkShowcase() {
       {/* ── Header ────────────────────────────────────────────────────────── */}
       <div className="mx-auto mb-10 flex max-w-7xl items-end justify-between px-6">
         <div>
-          <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500/60">
+          <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500">
             Our Work
           </p>
-          <h2 className="font-display text-2xl font-semibold text-white md:text-3xl">
+          <h2 className="font-display text-3xl font-semibold text-white md:text-4xl">
             Built in Raleigh. Finished Right.
           </h2>
           <div className="gold-divider mt-4" />
+          <p className="mt-3 text-sm text-white/60">Every job in the portfolio. Real work, real vehicles.</p>
         </div>
         <Link
           href="/portfolio"

@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock3, MapPin, Star } from "lucide-react";
+import { Clock3, MapPin, Shield, Star } from "lucide-react";
 import { BUSINESS_INFO } from "@/lib/business";
 
 const items = [
@@ -14,13 +14,19 @@ const items = [
     icon: Clock3,
     value: "24 Hours",
     label: "Quote Response",
-    sub: "Weekday goal for new requests",
+    sub: "On weekdays, no exceptions",
   },
   {
     icon: MapPin,
     value: "Raleigh, NC",
-    label: "Local Shop",
+    label: "Raleigh's Own",
     sub: BUSINESS_INFO.appointmentNote,
+  },
+  {
+    icon: Shield,
+    value: "Veteran",
+    label: "Owned & Operated",
+    sub: "Proudly serving our community",
   },
 ];
 
@@ -31,7 +37,7 @@ export default function TrustStrip() {
       aria-label="Trust indicators"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-0 md:divide-x md:divide-white/5">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-white/5">
           {items.map((item) => {
             const Icon = item.icon;
 
@@ -53,11 +59,11 @@ export default function TrustStrip() {
                     <span className="font-display text-lg font-bold leading-none text-white">
                       {item.value}
                     </span>
-                    <span className="text-xs text-white/40">
+                    <span className="text-xs text-white/50">
                       {item.label}
                     </span>
                   </div>
-                  <span className="text-[11px] text-white/40">
+                  <span className="text-[11px] text-white/50">
                     {item.sub}
                   </span>
                 </div>

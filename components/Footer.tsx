@@ -9,7 +9,7 @@ import { BUSINESS_INFO } from "@/lib/business";
 
 const footerLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/#services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
   { label: "Get a Quote", href: "/quote" },
@@ -34,7 +34,7 @@ export default function Footer() {
                 alt="KAR FX Customs"
                 width={320}
                 height={100}
-                className="h-24 w-auto object-contain"
+                className="h-28 w-auto object-contain"
               />
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-white/60">

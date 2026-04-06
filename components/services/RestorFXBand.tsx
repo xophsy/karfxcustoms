@@ -16,20 +16,22 @@ export default function RestorFXBand() {
           {/* ── Left: copy + CTAs ─────────────────────────────────────────── */}
           <div className="flex-1">
             {/* Label */}
-            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500/60">
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500">
               Trusted Partner
             </p>
 
             {/* Heading */}
             <h2 className="font-display text-2xl font-semibold text-white md:text-3xl">
-              Paint Restoration by RestorFX
+              Not Just Protected.
+              <br />
+              <span className="text-gold-gradient italic">Restored.</span>
             </h2>
 
             {/* Gold divider */}
             <div className="gold-divider my-5" />
 
             {/* Body copy */}
-            <p className="max-w-2xl text-sm leading-relaxed text-white/55 md:text-base">
+            <p className="max-w-2xl text-sm leading-relaxed text-white/60 md:text-base">
               For paint restoration, we proudly work alongside{" "}
               <span className="text-white/80 font-medium">RestorFX</span> — our
               trusted partner for specialized clearcoat repair and restoration.
@@ -66,7 +68,7 @@ export default function RestorFXBand() {
           <div className="flex shrink-0 flex-col items-center gap-3 lg:items-end">
             <div className="relative h-44 w-36 opacity-90 transition-opacity duration-300 hover:opacity-100">
               <Image
-                src="/images/services/partners/restorfx/Tarifa comercial.png"
+                src="/images/services/partners/restorfx/tarifa-comercial.jpg"
                 alt="Best of Business 2025 — Auto Restoration Service, Raleigh NC"
                 fill
                 className="object-contain drop-shadow-[0_4px_24px_rgba(212,175,55,0.18)]"

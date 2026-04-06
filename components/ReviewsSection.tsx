@@ -82,7 +82,7 @@ function ReviewCard({
     >
       {/* Decorative open-quote */}
       <div
-        className="mb-4 font-display text-5xl font-bold leading-none text-gold-500/20 select-none"
+        className="mb-4 font-display text-5xl font-bold leading-none text-gold-500/30 select-none"
         aria-hidden="true"
       >
         &ldquo;
@@ -109,7 +109,7 @@ function ReviewCard({
           </div>
 
           {/* Service tag */}
-          <span className="shrink-0 border border-white/8 bg-surface-700/50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/30">
+          <span className="shrink-0 border border-white/8 bg-surface-700/50 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white/40">
             {review.service}
           </span>
         </div>
@@ -157,7 +157,7 @@ export default function ReviewsSection() {
           {/* Label */}
           <div className="mb-4 flex items-center gap-3">
             <span className="block h-px w-8 bg-gold-500/40" aria-hidden="true" />
-            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500/60">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500">
               Customer Reviews
             </span>
           </div>
@@ -170,7 +170,7 @@ export default function ReviewsSection() {
                 <br />
                 <span className="text-gold-gradient">for Themselves.</span>
               </h2>
-              <p className="mt-3 text-sm text-white/40">
+              <p className="mt-3 text-sm text-white/55">
                 Don&apos;t take our word for it.
               </p>
             </div>
