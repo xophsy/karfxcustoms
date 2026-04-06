@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Depth Map — Camera Tuner</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; color: #fff; font-family: sans-serif; display: flex; height: 100vh; overflow: hidden; }
+
+    #panel {
+      width: 260px; flex-shrink: 0;
+      background: #111; border-right: 1px solid rgba(255,255,255,.08);
+      padding: 20px 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px;
+    }
+    #panel h1 { font-size: 10px; letter-spacing:.2em; text-transform:uppercase; color:#D4AF37; }
+    .group { display: flex; flex-direction: column; gap: 8px; }
+    .group-label { font-size: 9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.3); border-bottom:1px solid rgba(255,255,255,.06); padding-bottom:4px; }
+    .row { display: flex; align-items: center; gap: 8px; }
+    .row label { font-size: 10px; color: rgba(255,255,255,.5); width: 36px; flex-shrink:0; }
+    .row input[type=range] { flex: 1; accent-color: #D4AF37; cursor: pointer; }
+    .row span { font-size: 10px; color: #D4AF37; width: 44px; text-align:right; font-variant-numeric: tabular-nums; }
+    #copyBtn { padding: 8px; background: #D4AF37; color: #000; border: none; cursor: pointer; font-size: 10px; font-weight: 700; letter-spacing:.1em; text-transform:uppercase; }
+    #copyBtn:disabled { opacity: 0.4; cursor: default; }
+    #status { font-size: 10px; color: rgba(255,255,255,.5); line-height: 1.5; }
+
+    #preview { flex: 1; display: flex; overflow: hidden; }
+    .pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+    .pane-label { font-size: 9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.3); padding: 6px 10px; background:#0d0d0d; flex-shrink:0; }
+    .pane img { flex:1; width:100%; height:100%; object-fit:contain; display:block; }
+    .pane canvas { flex:1; width:100%; height:100%; object-fit:contain; display:block; background:#000; }
+  </style>
+</head>
+<body>
+
+  <div id="panel">
+    <h1>Camera Tuner</h1>
+    <div id="status">Loading Three.js…</div>
+
+    <div class="group">
+      <div class="group-label">Camera Position</div>
+      <div class="row"><label>Cam X</label><input type="range" id="cx" min="-8" max="8" step="0.1" value="-2.8"><span id="cxv">-2.8</span></div>
+      <div class="row"><label>Cam Y</label><input type="range" id="cy" min="-2" max="6" step="0.1" value="1.1"><span id="cyv">1.1</span></div>
+      <div class="row"><label>Cam Z</label><input type="range" id="cz" min="-8" max="8" step="0.1" value="3.2"><span id="czv">3.2</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-label">Look At</div>
+      <div class="row"><label>Tgt X</label><input type="range" id="tx" min="-4" max="4" step="0.1" value="0.4"><span id="txv">0.4</span></div>
+      <div class="row"><label>Tgt Y</label><input type="range" id="ty" min="-2" max="4" step="0.1" value="0.2"><span id="tyv">0.2</span></div>
+      <div class="row"><label>Tgt Z</label><input type="range" id="tz" min="-4" max="4" step="0.1" value="0.0"><span id="tzv">0.0</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-label">Lens &amp; Depth</div>
+      <div class="row"><label>FOV</label><input type="range" id="fov" min="10" max="90" step="1" value="42"><span id="fovv">42</span></div>
+      <div class="row"><label>Near</label><input type="range" id="dn" min="0.1" max="5" step="0.1" value="1.5"><span id="dnv">1.5</span></div>
+      <div class="row"><label>Far</label><input type="range" id="df" min="3" max="30" step="0.5" value="14"><span id="dfv">14.0</span></div>
+    </div>
+
+    <div class="group">
+      <div class="group-label">Model</div>
+      <div class="row"><label>Off X</label><input type="range" id="mx" min="-4" max="4" step="0.1" value="0"><span id="mxv">0.0</span></div>
+      <div class="row"><label>Off Y</label><input type="range" id="my" min="-4" max="4" step="0.1" value="0"><span id="myv">0.0</span></div>
+      <div class="row"><label>Off Z</label><input type="range" id="mz" min="-4" max="4" step="0.1" value="0"><span id="mzv">0.0</span></div>
+      <div class="row"><label>Rot Y</label><input type="range" id="ry" min="-180" max="180" step="1" value="0"><span id="ryv">0°</span></div>
+    </div>
+
+    <button id="copyBtn" disabled>Copy Values</button>
+  </div>
+
+  <div id="preview">
+    <div class="pane">
+      <div class="pane-label">Hero Photo</div>
+      <img src="/images/home/hero/background.jpg" />
+    </div>
+    <div class="pane">
+      <div class="pane-label">Depth Map (live)</div>
+      <canvas id="dm"></canvas>
+    </div>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.166.1/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.166.1/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    const status  = document.getElementById('status');
+    const copyBtn = document.getElementById('copyBtn');
+    const outCanvas = document.getElementById('dm');
+    const ctx2d   = outCanvas.getContext('2d');
+
+    const W = 1333, H = 1096;
+    outCanvas.width = W; outCanvas.height = H;
+
+    status.textContent = 'Loading 3D model…';
+
+    status.textContent = 'Loading 3D model…';
+
+    const renderer = new THREE.WebGLRenderer({ antialias: false });
+    renderer.setSize(W, H);
+    renderer.setPixelRatio(1);
+    renderer.setClearColor(0x000000, 1);
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(42, W / H, 0.5, 30);
+
+    const depthMat = new THREE.ShaderMaterial({
+      vertexShader: `
+        varying float vViewZ;
+        void main() {
+          vec4 mv = modelViewMatrix * vec4(position, 1.0);
+          vViewZ = -mv.z;
+          gl_Position = projectionMatrix * mv;
+        }
+      `,
+      fragmentShader: `
+        precision mediump float;
+        varying float vViewZ;
+        uniform float uNear; uniform float uFar;
+        void main() {
+          float d = 1.0 - clamp((vViewZ - uNear) / (uFar - uNear), 0.0, 1.0);
+          gl_FragColor = vec4(d, d, d, 1.0);
+        }
+      `,
+      uniforms: { uNear: { value: 1.5 }, uFar: { value: 14.0 } },
+      side: THREE.DoubleSide,
+    });
+
+    let model = null;
+    let basePos = new THREE.Vector3();
+
+    const loader = new GLTFLoader();
+    try {
+      const gltf = await new Promise((res, rej) => loader.load('/models/supra.glb', res, undefined, rej));
+
+      model = gltf.scene;
+      const box    = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+      const size   = box.getSize(new THREE.Vector3());
+      const scale  = 4 / Math.max(size.x, size.y, size.z);
+      model.scale.setScalar(scale);
+      basePos = center.clone().multiplyScalar(-scale);
+      model.position.copy(basePos);
+      model.traverse(c => { if (c.isMesh) c.material = depthMat; });
+      scene.add(model);
+
+      status.textContent = '✓ Ready — drag sliders to align';
+      copyBtn.disabled = false;
+      render();
+    } catch(e) {
+      status.textContent = '✗ Model load failed: ' + e.message;
+      throw e;
+    }
+
+    function v(id) { return parseFloat(document.getElementById(id).value); }
+
+    function render() {
+      if (!model) return;
+      camera.fov = v('fov');
+      camera.updateProjectionMatrix();
+      camera.position.set(v('cx'), v('cy'), v('cz'));
+      camera.lookAt(v('tx'), v('ty'), v('tz'));
+      depthMat.uniforms.uNear.value = v('dn');
+      depthMat.uniforms.uFar.value  = v('df');
+      model.position.set(basePos.x + v('mx'), basePos.y + v('my'), basePos.z + v('mz'));
+      model.rotation.y = v('ry') * Math.PI / 180;
+      renderer.render(scene, camera);
+      ctx2d.clearRect(0, 0, W, H);
+      ctx2d.drawImage(renderer.domElement, 0, 0);
+    }
+
+    // Wire sliders
+    document.querySelectorAll('input[type=range]').forEach(el => {
+      el.addEventListener('input', () => {
+        const id = el.id;
+        const val = parseFloat(el.value);
+        const label = document.getElementById(id + 'v');
+        label.textContent = id === 'ry' ? val + '°' : val.toFixed(1);
+        render();
+      });
+    });
+
+    // Copy
+    copyBtn.addEventListener('click', () => {
+      const out = {
+        camera:  { x: v('cx'), y: v('cy'), z: v('cz') },
+        lookAt:  { x: v('tx'), y: v('ty'), z: v('tz') },
+        fov: v('fov'), near: v('dn'), far: v('df'),
+        model:   { x: v('mx'), y: v('my'), z: v('mz'), rotY: v('ry') },
+      };
+      navigator.clipboard.writeText(JSON.stringify(out, null, 2))
+        .then(() => status.textContent = '✓ Copied to clipboard — paste to Claude');
+    });
+  </script>
+</body>
+</html>

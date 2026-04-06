@@ -1,0 +1,32 @@
+export const BUSINESS_INFO = {
+  brandName: "KAR FX Customs",
+  category:
+    "Premium PPF, wraps, tint, ceramic coating, detailing, and custom vehicle upgrades in Raleigh, NC.",
+  summary:
+    "Raleigh-based shop for premium PPF, wraps, tint, ceramic coating, detailing, RestorFX, and custom vehicle upgrades.",
+  veteranOwnedLabel: "Raleigh-based shop",
+  serviceAreaLabel: "Raleigh area",
+  serviceAreaMessage: "Based in Raleigh and serving local clients by appointment.",
+  locationName: "The Business Center at Lincoln Park North",
+  streetAddress: "3215 Wellington Ct Suite 103",
+  cityStateZip: "Raleigh, NC 27615",
+  fullAddress: "3215 Wellington Ct Suite 103, Raleigh, NC 27615",
+  appointmentOnlyLabel: "Appointment-only",
+  appointmentNote: "Shop visits are by appointment",
+  availabilityNote: "Call or message to confirm availability",
+  phoneDisplay: "(919) 526-0818",
+  phoneHref: "tel:+19195260818",
+  email: "info@karfxcustoms.com",
+  emailHref: "mailto:info@karfxcustoms.com",
+  reviewRating: "5.0",
+  reviewCount: "69",
+  reviewSummary: "5.0 Google rating from 69 reviews",
+  responseTime: "24-hour quote response on weekdays",
+  restorfxPartnerLabel: "Appointment-only scheduling",
+  mapHref:
+    "https://www.google.com/maps/search/?api=1&query=3215%20Wellington%20Ct%20Suite%20103%2C%20Raleigh%2C%20NC%2027615",
+  instagramHandle: "@karfxcustoms",
+  instagramHref: "https://instagram.com/karfxcustoms",
+  facebookHref: "https://facebook.com/karfxcustoms",
+  tiktokHref: "https://tiktok.com/@karfxcustoms",
+} as const;

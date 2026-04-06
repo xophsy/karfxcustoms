@@ -1,0 +1,115 @@
+KAR FX CUSTOMS — IMAGE FOLDER GUIDE
+=====================================
+Replace any image by dropping in a new photo with the EXACT SAME filename.
+No code changes needed when swapping images.
+
+─────────────────────────────────────────────────────────────
+EXISTING FOLDERS (unchanged)
+─────────────────────────────────────────────────────────────
+branding/              → Logo used in navbar and footer
+home/hero/             → Homepage hero background
+home/goals/            → Homepage goal cards
+home/services/         → Homepage featured service cards
+home/gallery-preview/  → Homepage gallery preview grid
+services/catalog/      → Service category cards (used site-wide)
+portfolio/             → Portfolio page builds
+gallery/all/           → Full gallery page images
+
+─────────────────────────────────────────────────────────────
+NEW: SERVICE PAGE IMAGES
+/services/{category}/{service}/
+─────────────────────────────────────────────────────────────
+hero.jpg             → Page hero / banner image
+gallery-01.jpg       → First gallery image
+gallery-02.jpg       → Second gallery image
+gallery-03.jpg       → Third gallery image
+detail-01.jpg        → Close-up / detail shot
+before-after-01.jpg  → Before & after (detailing, PPF, wraps)
+
+Files marked [PLACEHOLDER] need real photos.
+Keep the same filename — the site will automatically use the new image.
+
+PROTECTION
+  protection/ppf/
+    hero.jpg           ← PPF (uses catalog/ppf.jpg)
+    gallery-01.jpg     ← Maserati PPF (uses gallery/all/maserati-ppf.jpg)
+    gallery-02.jpg     ← BMW PPF (uses gallery/all/bmw-ppf.jpg)
+    gallery-03.jpg     [PLACEHOLDER] Front bumper PPF edge close-up
+    detail-01.jpg      [PLACEHOLDER] PPF film line on impact zone
+
+  protection/window-tint/
+    hero.jpg           ← Tint (uses catalog/tint.jpg)
+    gallery-01.jpg     ← F-350 tint (uses gallery/all/f350-tint.jpg)
+    gallery-02.jpg     [PLACEHOLDER] Interior view through tinted windows
+    gallery-03.jpg     [PLACEHOLDER] Rear window tint close-up
+
+  protection/light-tint/
+    hero.jpg           [PLACEHOLDER] Headlight/taillight lens close-up
+    gallery-01.jpg     [PLACEHOLDER] Smoked headlight side angle
+    gallery-02.jpg     [PLACEHOLDER] Tinted taillights rear 3/4 view
+    gallery-03.jpg     [PLACEHOLDER] Before/after: stock vs tinted
+
+WRAPS & STYLING
+  wraps-styling/color-change-wrap/
+    hero.jpg           ← Color change (uses catalog/color-change.jpg)
+    gallery-01.jpg     ← Supra ombre (uses gallery/all/supra-ombre.jpg)
+    gallery-02.jpg     ← Wrap side view (uses gallery/all/wraps.jpg)
+    gallery-03.jpg     [PLACEHOLDER] Full vehicle 3/4 front view
+
+  wraps-styling/chrome-delete/
+    hero.jpg           ← Chrome delete (uses catalog/chrome-delete.jpg)
+    gallery-01.jpg     ← Close-up (uses gallery/all/chrome-delete.jpg)
+    gallery-02.jpg     [PLACEHOLDER] Window trim blacked-out, side view
+    gallery-03.jpg     [PLACEHOLDER] Grille/badge close-up
+
+  wraps-styling/commercial-wraps/
+    hero.jpg           ← Commercial (uses catalog/commercial.jpg)
+    gallery-01.jpg     ← Branded vehicle (uses gallery/all/tarifa-comercial.jpg)
+    gallery-02.jpg     [PLACEHOLDER] Commercial truck side branding
+    gallery-03.jpg     [PLACEHOLDER] Install process shot
+
+  wraps-styling/signage/
+    hero.jpg           [PLACEHOLDER] Business signage on building
+    gallery-01.jpg     [PLACEHOLDER] Vinyl lettering on glass window
+    gallery-02.jpg     [PLACEHOLDER] Panel signage outdoor
+    gallery-03.jpg     [PLACEHOLDER] Vehicle door graphics
+
+WHEELS, CALIPERS & LIGHTING
+  wheels-calipers-lighting/wheel-painting/
+    hero.jpg           ← Wheels (uses catalog/wheels.jpg)
+    gallery-01.jpg     ← Painted wheels (uses gallery/all/wheels.jpg)
+    gallery-02.jpg     [PLACEHOLDER] Custom painted wheel close-up
+    gallery-03.jpg     [PLACEHOLDER] Before/after wheel paint
+
+  wheels-calipers-lighting/caliper-painting/
+    hero.jpg           [PLACEHOLDER] Painted caliper through spokes (red or gold)
+    gallery-01.jpg     [PLACEHOLDER] Caliper color close-up
+    gallery-02.jpg     [PLACEHOLDER] Painted caliper on dark wheel
+    gallery-03.jpg     [PLACEHOLDER] Caliper painting process
+
+  wheels-calipers-lighting/reflective-calipers/
+    hero.jpg           [PLACEHOLDER] Reflective caliper catching light
+    gallery-01.jpg     [PLACEHOLDER] Reflective caliper, full wheel view
+    gallery-02.jpg     [PLACEHOLDER] Reflective caliper lit at night
+
+  wheels-calipers-lighting/starlight-headliner/
+    hero.jpg           ← Starlight (uses catalog/starlight.jpg)
+    gallery-01.jpg     ← Wide interior (uses gallery/all/starlight-headliner.jpg)
+    gallery-02.jpg     ← Fiber close-up (uses gallery/all/starlight.jpg)
+
+  wheels-calipers-lighting/ambient-interior-lighting/
+    hero.jpg           ← Ambient (uses catalog/ambient-lighting.jpg)
+    gallery-01.jpg     ← Footwells (uses gallery/all/ambient-lighting.jpg)
+    gallery-02.jpg     ← Mercedes Maybach (uses gallery/all/mercedes-maybach-...)
+
+DETAILING
+  detailing/interior-exterior-detailing/
+    hero.jpg           ← Detail shot (uses gallery/all/detail-shot-1.jpg)
+    gallery-01.jpg     ← Surface close-up (uses gallery/all/detail-shot-2.jpg)
+    gallery-02.jpg     ← Paint correction (uses gallery/all/paint-correction.jpg)
+    gallery-03.jpg     [PLACEHOLDER] Interior deep clean
+    before-after-01.jpg [PLACEHOLDER] Before/after exterior detailing
+
+PARTNERS
+  partners/restorfx/
+    logo.jpg           ← RestorFX (uses catalog/restorfx.jpg)

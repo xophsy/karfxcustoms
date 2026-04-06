@@ -1,0 +1,386 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "KAR FX Customs Home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "KAR FX Customs" [ref=e7]
+      - navigation "Main navigation" [ref=e8]:
+        - link "Home" [ref=e9] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "Services" [ref=e10] [cursor=pointer]:
+          - /url: /services
+          - text: Services
+        - link "Portfolio" [ref=e11] [cursor=pointer]:
+          - /url: /portfolio
+          - text: Portfolio
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /about
+          - text: About
+      - generic [ref=e13]:
+        - link "Get Quote" [ref=e14] [cursor=pointer]:
+          - /url: /quote
+        - link "Book Now" [ref=e15] [cursor=pointer]:
+          - /url: /book
+  - main [ref=e16]:
+    - region "Hero section" [ref=e17]:
+      - img "Toyota GR Supra custom red to black ombre wrap by KarFX Customs" [ref=e19]
+      - generic [ref=e23]:
+        - generic [ref=e26]: KarFX Customs — Raleigh, NC
+        - heading "Protect It. Transform It." [level=1] [ref=e27]:
+          - text: Protect It.
+          - text: Transform It.
+        - paragraph [ref=e28]: Paint protection film, custom wraps, window tint, ceramic coating, starlight headliners — every service done right, on vehicles you care about.
+        - generic [ref=e29]:
+          - link "Get a Free Quote" [ref=e30] [cursor=pointer]:
+            - /url: /quote
+            - img [ref=e31]
+            - text: Get a Free Quote
+          - link "See Our Work" [ref=e33] [cursor=pointer]:
+            - /url: /portfolio
+            - text: See Our Work
+        - generic [ref=e36]:
+          - generic [ref=e37]: 500+
+          - generic [ref=e38]: Vehicles Transformed
+      - button "Scroll to services" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: Scroll
+        - img [ref=e41]
+    - generic "Trust indicators" [ref=e43]:
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - img [ref=e47]
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: 500+
+              - generic [ref=e55]: Vehicles Completed
+            - text: Since 2016
+        - generic [ref=e56]:
+          - img [ref=e57]
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: Certified
+              - generic [ref=e63]: RestorFX Partner
+            - text: Authorized Dealer
+        - generic [ref=e64]:
+          - img [ref=e65]
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: 24hr
+              - generic [ref=e71]: Quote Response
+            - text: Weekday average
+    - region "Find your service by goal" [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - generic [ref=e78]: What's Your Goal
+            - heading "Choose Your Transformation" [level=2] [ref=e79]:
+              - text: Choose Your
+              - text: Transformation
+          - link "Not sure? We'll help you decide" [ref=e80] [cursor=pointer]:
+            - /url: /quote
+            - text: Not sure? We'll help you decide
+            - img [ref=e81]
+        - generic [ref=e83]:
+          - link "Protect My Paint" [ref=e85] [cursor=pointer]:
+            - /url: /services#category-protection
+            - img "BMW receiving paint protection film" [ref=e86]
+            - generic [ref=e89]: "01"
+            - generic [ref=e91]: Protect
+            - generic [ref=e92]:
+              - heading "Protect My Paint" [level=3] [ref=e93]:
+                - text: Protect
+                - text: My Paint
+              - paragraph [ref=e94]: Invisible armor for your investment
+              - generic [ref=e95]:
+                - generic [ref=e96]: PPF
+                - generic [ref=e97]: Ceramic Coating
+                - generic [ref=e98]: Window Tint
+              - generic [ref=e99]:
+                - generic [ref=e100]: Explore
+                - img [ref=e101]
+          - link "Transform The Look" [ref=e104] [cursor=pointer]:
+            - /url: /services#category-styling
+            - img "Vehicle wrap color change in progress" [ref=e105]
+            - generic [ref=e108]: "02"
+            - generic [ref=e110]: Transform
+            - generic:
+              - heading "Transform The Look" [level=3]:
+                - text: Transform
+                - text: The Look
+              - paragraph: Any color. Any finish. Fully reversible
+              - generic:
+                - generic: Full Wraps
+                - generic: Partial Wraps
+                - generic: Chrome Delete
+              - generic:
+                - generic: Explore
+                - img
+          - link "Restore The Finish" [ref=e112] [cursor=pointer]:
+            - /url: /services#category-restoration
+            - img "Vehicle finish restoration detail work" [ref=e113]
+            - generic [ref=e116]: "03"
+            - generic [ref=e118]: Restore
+            - generic:
+              - heading "Restore The Finish" [level=3]:
+                - text: Restore
+                - text: The Finish
+              - paragraph: Bring back the day-one shine
+              - generic:
+                - generic: Paint Correction
+                - generic: Detailing
+                - generic: RestorFX
+              - generic:
+                - generic: Explore
+                - img
+          - link "Upgrade The Interior" [ref=e120] [cursor=pointer]:
+            - /url: /services#category-lighting
+            - img "Custom starlight headliner interior" [ref=e121]
+            - generic [ref=e124]: "04"
+            - generic [ref=e126]: Upgrade
+            - generic:
+              - heading "Upgrade The Interior" [level=3]:
+                - text: Upgrade
+                - text: The Interior
+              - paragraph: Thousands of stars. One unforgettable cabin
+              - generic:
+                - generic: Starlight Headliners
+                - generic: Ambient Lighting
+              - generic:
+                - generic: Explore
+                - img
+          - link "Brand Your Fleet" [ref=e128] [cursor=pointer]:
+            - /url: /services#category-commercial
+            - img "Commercial vehicle branding and fleet graphics" [ref=e129]
+            - generic [ref=e132]: "05"
+            - generic [ref=e134]: Brand
+            - generic:
+              - heading "Brand Your Fleet" [level=3]:
+                - text: Brand
+                - text: Your Fleet
+              - paragraph: Turn every vehicle into a moving billboard
+              - generic:
+                - generic: Fleet Graphics
+                - generic: Commercial Wraps
+              - generic:
+                - generic: Explore
+                - img
+        - generic [ref=e135]:
+          - button "View Protect" [ref=e136] [cursor=pointer]
+          - button "View Transform" [ref=e137] [cursor=pointer]
+          - button "View Restore" [ref=e138] [cursor=pointer]
+          - button "View Upgrade" [ref=e139] [cursor=pointer]
+          - button "View Brand" [ref=e140] [cursor=pointer]
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e146]: How It Works
+        - heading "From Vision to Reveal" [level=2] [ref=e147]:
+          - text: From Vision to
+          - emphasis [ref=e148]: Reveal
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - generic [ref=e152]: "01"
+          - generic [ref=e153]:
+            - heading "Tell Us Your Vision" [level=3] [ref=e154]
+            - paragraph [ref=e155]: Describe your car, your goals, and your budget. We want to understand the full picture before we recommend anything.
+        - generic [ref=e156]:
+          - generic [ref=e158]: "02"
+          - generic [ref=e159]:
+            - heading "Get a Recommendation" [level=3] [ref=e160]
+            - paragraph [ref=e161]: We assess your vehicle and recommend the right services for your goals. You'll get a clear, itemized quote — no surprises.
+        - generic [ref=e162]:
+          - generic [ref=e164]: "03"
+          - generic [ref=e165]:
+            - heading "Drop Off Your Vehicle" [level=3] [ref=e166]
+            - paragraph [ref=e167]: Bring it in on your scheduled date. We'll keep you updated throughout the process so you're never left wondering.
+        - generic [ref=e168]:
+          - generic [ref=e170]: "04"
+          - generic [ref=e171]:
+            - heading "Final Reveal" [level=3] [ref=e172]
+            - paragraph [ref=e173]: Pick up a transformed vehicle that turns heads. Every detail is inspected before we hand back the keys.
+      - generic [ref=e174]:
+        - link "Ready to Start? Get a Quote" [ref=e175] [cursor=pointer]:
+          - /url: /quote
+        - 'link "or call us: +1 (555) 000-0000" [ref=e176] [cursor=pointer]':
+          - /url: tel:+15550000000
+          - img [ref=e177]
+          - text: "or call us: +1 (555) 000-0000"
+    - region "Customer testimonials" [ref=e179]:
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - generic [ref=e184]: Client Reviews
+          - heading "What They Say" [level=2] [ref=e186]
+        - generic [ref=e187]:
+          - button "Previous testimonial" [ref=e188] [cursor=pointer]:
+            - img [ref=e189]
+          - button "Next testimonial" [ref=e191] [cursor=pointer]:
+            - img [ref=e192]
+          - generic [ref=e194]:
+            - img [ref=e196]
+            - blockquote [ref=e199]: “KAR FX did an absolute flawless job on my Lamborghini. The PPF installation was perfect — zero bubbles, zero lifting edges. You can tell these guys actually care about the cars they work on.”
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - generic [ref=e202]: MT
+                - generic [ref=e203]:
+                  - paragraph [ref=e204]: Marcus T.
+                  - paragraph [ref=e205]: Lamborghini Huracán
+                  - paragraph [ref=e206]: Full PPF
+              - generic "5 out of 5 stars" [ref=e207]:
+                - img [ref=e208]
+                - img [ref=e210]
+                - img [ref=e212]
+                - img [ref=e214]
+                - img [ref=e216]
+        - tablist "Testimonial navigation" [ref=e219]:
+          - tab "Testimonial 1" [selected] [ref=e220] [cursor=pointer]
+          - tab "Testimonial 2" [ref=e221] [cursor=pointer]
+          - tab "Testimonial 3" [ref=e222] [cursor=pointer]
+          - tab "Testimonial 4" [ref=e223] [cursor=pointer]
+        - generic [ref=e224]:
+          - button "Jump to James R.'s testimonial" [ref=e225] [cursor=pointer]:
+            - generic "5 out of 5 stars" [ref=e226]:
+              - img [ref=e227]
+              - img [ref=e229]
+              - img [ref=e231]
+              - img [ref=e233]
+              - img [ref=e235]
+            - paragraph [ref=e237]: “Had my BMW M4 wrapped in matte black and the result is stunning. They took their time, communicated throughout the process, and delivered exactly what I envisioned. Highly recommend.”
+            - paragraph [ref=e238]: — James R.
+          - button "Jump to Sofia K.'s testimonial" [ref=e239] [cursor=pointer]:
+            - generic "5 out of 5 stars" [ref=e240]:
+              - img [ref=e241]
+              - img [ref=e243]
+              - img [ref=e245]
+              - img [ref=e247]
+              - img [ref=e249]
+            - paragraph [ref=e251]: “The starlight headliner they installed in my Range Rover is beyond incredible. Every time I get in the car at night it feels like sitting in a private jet. Absolute craftsmanship.”
+            - paragraph [ref=e252]: — Sofia K.
+          - button "Jump to Daniel W.'s testimonial" [ref=e253] [cursor=pointer]:
+            - generic "5 out of 5 stars" [ref=e254]:
+              - img [ref=e255]
+              - img [ref=e257]
+              - img [ref=e259]
+              - img [ref=e261]
+              - img [ref=e263]
+            - paragraph [ref=e265]: “Brought in my Ferrari for a full detail and paint correction. These guys are meticulous — the paint looks better than the day I drove it off the lot. Worth every penny.”
+            - paragraph [ref=e266]: — Daniel W.
+    - region "Frequently asked questions" [ref=e267]:
+      - generic [ref=e268]:
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - generic [ref=e273]: Common Questions
+            - heading "Quick Answers" [level=2] [ref=e274]
+          - link "View all frequently asked questions" [ref=e275] [cursor=pointer]:
+            - /url: /faq
+            - text: View All FAQs →
+        - generic [ref=e276]:
+          - button "How long does a full wrap take?" [ref=e278] [cursor=pointer]:
+            - generic [ref=e279]: How long does a full wrap take?
+            - img [ref=e280]
+          - button "What's the difference between PPF and ceramic coating?" [ref=e282] [cursor=pointer]:
+            - generic [ref=e283]: What's the difference between PPF and ceramic coating?
+            - img [ref=e284]
+          - button "Will a vinyl wrap damage my paint?" [ref=e286] [cursor=pointer]:
+            - generic [ref=e287]: Will a vinyl wrap damage my paint?
+            - img [ref=e288]
+          - button "Do I need a consultation before booking?" [ref=e290] [cursor=pointer]:
+            - generic [ref=e291]: Do I need a consultation before booking?
+            - img [ref=e292]
+          - button "What vehicles do you work on?" [ref=e294] [cursor=pointer]:
+            - generic [ref=e295]: What vehicles do you work on?
+            - img [ref=e296]
+        - generic [ref=e297]:
+          - link "Still Have Questions? Get a Free Quote" [ref=e298] [cursor=pointer]:
+            - /url: /quote
+          - link "Browse all FAQs →" [ref=e299] [cursor=pointer]:
+            - /url: /faq
+    - generic [ref=e301]:
+      - generic [ref=e304]: Ready When You Are
+      - heading "Transform Your Vehicle Today" [level=2] [ref=e306]
+      - paragraph [ref=e307]: Tell us what you’re building. We’ll take it from there.
+      - generic [ref=e308]:
+        - link "Get a Quote" [ref=e309] [cursor=pointer]:
+          - /url: /quote
+        - link "Book Now" [ref=e310] [cursor=pointer]:
+          - /url: /book
+        - link "Call Us" [ref=e311] [cursor=pointer]:
+          - /url: tel:+15550000000
+          - img [ref=e312]
+          - text: Call Us
+  - contentinfo [ref=e314]:
+    - generic [ref=e316]:
+      - generic [ref=e317]:
+        - paragraph [ref=e318]: Ready to Transform?
+        - heading "Let’s Redefine Your Ride." [level=2] [ref=e319]
+      - link "Book Appointment" [ref=e320] [cursor=pointer]:
+        - /url: "#contact"
+        - img [ref=e321]
+        - text: Book Appointment
+    - generic [ref=e324]:
+      - generic [ref=e325]:
+        - generic [ref=e326]:
+          - img "KAR FX Customs" [ref=e328]
+          - paragraph [ref=e329]: Car enthusiasts from around the world redefining automotive aesthetics through precision craftsmanship.
+          - generic [ref=e331]:
+            - paragraph [ref=e332]: Hours
+            - generic [ref=e333]:
+              - generic [ref=e334]:
+                - generic [ref=e335]: Mon – Fri
+                - generic [ref=e336]: 8:00 AM – 6:00 PM
+              - generic [ref=e337]:
+                - generic [ref=e338]: Saturday
+                - generic [ref=e339]: 9:00 AM – 4:00 PM
+              - generic [ref=e340]:
+                - generic [ref=e341]: Sunday
+                - generic [ref=e342]: By Appointment
+        - generic [ref=e343]:
+          - heading "Navigation" [level=3] [ref=e344]
+          - list [ref=e345]:
+            - listitem [ref=e346]:
+              - link "Services" [ref=e347] [cursor=pointer]:
+                - /url: /services
+            - listitem [ref=e348]:
+              - link "Portfolio" [ref=e349] [cursor=pointer]:
+                - /url: /portfolio
+            - listitem [ref=e350]:
+              - link "About" [ref=e351] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e352]:
+              - link "Get a Quote" [ref=e353] [cursor=pointer]:
+                - /url: /quote
+            - listitem [ref=e354]:
+              - link "Book Now" [ref=e355] [cursor=pointer]:
+                - /url: /book
+            - listitem [ref=e356]:
+              - link "Contact" [ref=e357] [cursor=pointer]:
+                - /url: /contact
+            - listitem [ref=e358]:
+              - link "FAQ" [ref=e359] [cursor=pointer]:
+                - /url: /faq
+        - generic [ref=e360]:
+          - heading "Connect" [level=3] [ref=e361]
+          - generic [ref=e362]:
+            - paragraph [ref=e363]: info@karfxcustoms.com
+            - paragraph [ref=e364]: +1 (555) 000-0000
+            - paragraph [ref=e365]: 123 Auto Row, Custom City, CA
+          - generic [ref=e366]:
+            - link "Follow us on Instagram" [ref=e367] [cursor=pointer]:
+              - /url: https://instagram.com/karfxcustoms
+              - img [ref=e368]
+            - link "Follow us on Facebook" [ref=e371] [cursor=pointer]:
+              - /url: https://facebook.com/karfxcustoms
+              - img [ref=e372]
+            - link "Follow us on TikTok" [ref=e375] [cursor=pointer]:
+              - /url: https://tiktok.com/@karfxcustoms
+              - img [ref=e376]
+      - generic [ref=e380]:
+        - paragraph [ref=e381]: © 2026 KAR FX Customs. All rights reserved.
+        - navigation "Legal" [ref=e382]:
+          - link "Privacy Policy" [ref=e384] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=e387] [cursor=pointer]:
+            - /url: /terms
+          - link "Accessibility" [ref=e390] [cursor=pointer]:
+            - /url: /accessibility
+  - alert [ref=e391]
