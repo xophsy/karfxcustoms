@@ -249,7 +249,7 @@ export default function ReviewsSection() {
           </article>
 
           {/* Mobile nav */}
-          <div className="mt-6 flex items-center justify-center gap-3 md:hidden">
+          <div className="mt-6 flex items-center justify-end gap-3 md:hidden">
             <button
               onClick={prev}
               className="flex w-9 h-9 items-center justify-center border border-white/10 text-white/40 hover:text-white/70 transition-colors duration-200"
