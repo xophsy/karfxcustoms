@@ -75,12 +75,12 @@ export default function Hero() {
         <HeroBackground />
 
         <div
-          className="hero-orb"
+          className="hero-orb hidden md:block"
           style={{ width: 420, height: 420, top: "8%", left: "12%" }}
           aria-hidden="true"
         />
         <div
-          className="hero-orb"
+          className="hero-orb hidden md:block"
           style={{ width: 320, height: 320, top: "58%", right: "12%", animationDelay: "3s, 1.5s" }}
           aria-hidden="true"
         />
@@ -136,7 +136,7 @@ export default function Hero() {
             </Link>
           </div>
 
-          <div className="hero-item hero-item-5 max-w-3xl border-t border-white/5 pt-5">
+          <div className="hero-item hero-item-5 hidden max-w-3xl border-t border-white/5 pt-5 md:block">
             <p className="text-sm leading-relaxed text-white/65">
               Raleigh-based.&nbsp; Serious about the work.&nbsp; Quick to respond.
             </p>

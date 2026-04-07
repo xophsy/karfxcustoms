@@ -9,7 +9,7 @@ const HERO_V_OFFSET = 0.12;
 const MOBILE_H_OFFSET = 0.00;
 
 // ── Mobile zoom-out — pulls back slightly on small screens ────────────────────
-const MOBILE_ZOOM_OUT = 1.25;
+const MOBILE_ZOOM_OUT = 1.0;
 
 // ── WebGL shaders ─────────────────────────────────────────────────────────────
 
@@ -175,7 +175,7 @@ export default function HeroBackground() {
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, depth);
       resize();
       ready.current = true;
-      canvas.style.opacity = canvas.offsetWidth < 768 ? "0.78" : "0.90";
+      canvas.style.opacity = canvas.offsetWidth < 768 ? "0.90" : "0.90";
     });
 
     // ── Scroll parallax: CSS translateY on the canvas ────────────────────────
@@ -204,10 +204,10 @@ export default function HeroBackground() {
         style={{ opacity: 0, transition: "opacity 0.6s ease" }}
         aria-hidden="true"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-900/30 via-surface-900/5 to-surface-900/55" />
-      <div className="absolute inset-0 bg-gradient-to-r from-surface-900/45 via-surface-900/0 to-surface-900/10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-surface-900/20 via-surface-900/5 to-surface-900/40 md:from-surface-900/30 md:to-surface-900/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-surface-900/30 via-surface-900/0 to-surface-900/5 md:from-surface-900/45 md:to-surface-900/10" />
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 hidden md:block"
         style={{
           background:
             "radial-gradient(circle at 72% 44%, rgba(255,255,255,0.08), transparent 24%), radial-gradient(circle at 62% 78%, rgba(212,175,55,0.12), transparent 28%)",
