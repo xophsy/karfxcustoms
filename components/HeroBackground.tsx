@@ -2,8 +2,9 @@
 
 import { useEffect, useRef, useCallback } from "react";
 
-// ── Vertical offset — shifts the image down to show more car ──────────────────
-const HERO_V_OFFSET = 0.12;
+// ── Vertical offsets — mobile vs desktop ─────────────────────────────────────
+const MOBILE_V_OFFSET  = -0.04;
+const DESKTOP_V_OFFSET =  0.12;
 
 // ── Mobile horizontal offset — pans right to bring the car into frame ─────────
 const MOBILE_H_OFFSET = 0.00;
@@ -141,7 +142,6 @@ export default function HeroBackground() {
     if (!state) return;
     glRef.current = state;
     const { gl, uCover, uVOffset, uHOffset } = state;
-    gl.uniform1f(uVOffset, HERO_V_OFFSET);
 
     let imgW = 1, imgH = 1;
 
@@ -159,6 +159,8 @@ export default function HeroBackground() {
       gl.uniform2f(uCover, (cR > iR ? 1 : cR / iR) * zoom, (cR > iR ? iR / cR : 1) * zoom);
       // Pan right on mobile so the car is visible, no pan on desktop
       gl.uniform1f(uHOffset, w < 768 ? MOBILE_H_OFFSET : 0);
+      // Vertical offset — different per breakpoint
+      gl.uniform1f(uVOffset, w < 768 ? MOBILE_V_OFFSET : DESKTOP_V_OFFSET);
     };
     resize();
     window.addEventListener("resize", resize);
