@@ -11,7 +11,7 @@ import WorkShowcase from "@/components/WorkShowcase";
 export const metadata: Metadata = {
   title: "KAR FX Customs | PPF, Wraps, Tint & Detailing in Raleigh, NC",
   description:
-    "Raleigh's go-to shop for paint protection film, vehicle wraps, window tint, ceramic coating, and detailing. 5.0 Google rating. Appointment-based at 3215 Wellington Ct, Raleigh NC.",
+    "PPF, wraps, tint, ceramic coating & detailing in Raleigh, NC. 5.0 stars from 69 reviews. Appointment-based shop — call or text to book.",
   alternates: { canonical: "https://karfxcustoms.com" },
   openGraph: {
     title: "KAR FX Customs | Vehicle Protection & Styling in Raleigh, NC",

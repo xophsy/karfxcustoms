@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | KAR FX Customs — Raleigh",
   },
   description:
-    "Raleigh-based shop for premium PPF, vehicle wraps, window tint, ceramic coating, detailing, and RestorFX paint restoration. Appointment-based. 5.0 Google rating.",
+    "PPF, wraps, tint, ceramic coating & detailing in Raleigh, NC. 5.0 stars from 69 reviews. Appointment-based shop — call or text to book.",
   keywords: [
     "Raleigh PPF",
     "paint protection film Raleigh NC",
