@@ -28,7 +28,7 @@ export default function Home() {
       <TrustStrip />
 
       {/* ── Services Section ─────────────────────────────────────────────── */}
-      <section id="services" className="py-20 bg-black">
+      <section id="services" className="py-10 bg-black md:py-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal className="mb-12 text-center">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-gold-500">

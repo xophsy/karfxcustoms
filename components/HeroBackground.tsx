@@ -2,8 +2,14 @@
 
 import { useEffect, useRef, useCallback } from "react";
 
-// ── Vertical offset — increase to shift the image down and show more car ──────
+// ── Vertical offset — shifts the image down to show more car ──────────────────
 const HERO_V_OFFSET = 0.12;
+
+// ── Mobile horizontal offset — pans right to bring the car into frame ─────────
+const MOBILE_H_OFFSET = 0.00;
+
+// ── Mobile zoom-out — pulls back slightly on small screens ────────────────────
+const MOBILE_ZOOM_OUT = 1.25;
 
 // ── WebGL shaders ─────────────────────────────────────────────────────────────
 
@@ -24,9 +30,10 @@ const FRAG = `
   uniform vec2 uMouse;
   uniform vec2 uCover;
   uniform float uVOffset;
+  uniform float uHOffset;
   varying vec2 vUV;
   void main() {
-    vec2 uv     = (vUV - 0.5) * uCover + vec2(0.5, 0.5 + uVOffset);
+    vec2 uv     = (vUV - 0.5) * uCover + vec2(0.5 + uHOffset, 0.5 + uVOffset);
     float depth = texture2D(uDepth, uv).r;
     vec2 offset = uMouse * depth * 0.038;
 
@@ -49,8 +56,6 @@ function loadImage(src: string): Promise<HTMLImageElement> {
     img.src = src;
   });
 }
-
-const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
 
 // ── WebGL init ────────────────────────────────────────────────────────────────
 
@@ -107,6 +112,7 @@ function initGL(canvas: HTMLCanvasElement) {
     uMouse:   gl.getUniformLocation(prog, "uMouse")!,
     uCover:   gl.getUniformLocation(prog, "uCover")!,
     uVOffset: gl.getUniformLocation(prog, "uVOffset")!,
+    uHOffset: gl.getUniformLocation(prog, "uHOffset")!,
   };
 }
 
@@ -134,18 +140,25 @@ export default function HeroBackground() {
     const state = initGL(canvas);
     if (!state) return;
     glRef.current = state;
-    const { gl, uCover, uVOffset } = state;
+    const { gl, uCover, uVOffset, uHOffset } = state;
     gl.uniform1f(uVOffset, HERO_V_OFFSET);
 
     let imgW = 1, imgH = 1;
 
     const resize = () => {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-      gl.viewport(0, 0, canvas.width, canvas.height);
-      const cR = canvas.width / canvas.height;
+      // Use the canvas's actual rendered size so WebGL matches CSS exactly
+      const w = canvas.offsetWidth  || window.innerWidth;
+      const h = canvas.offsetHeight || window.innerHeight;
+      canvas.width  = w;
+      canvas.height = h;
+      gl.viewport(0, 0, w, h);
+      const cR = w / h;
       const iR = imgW / imgH;
-      gl.uniform2f(uCover, cR > iR ? 1 : cR / iR, cR > iR ? iR / cR : 1);
+      // Slight zoom-out on mobile, pure cover on desktop
+      const zoom = w < 768 ? MOBILE_ZOOM_OUT : 1.0;
+      gl.uniform2f(uCover, (cR > iR ? 1 : cR / iR) * zoom, (cR > iR ? iR / cR : 1) * zoom);
+      // Pan right on mobile so the car is visible, no pan on desktop
+      gl.uniform1f(uHOffset, w < 768 ? MOBILE_H_OFFSET : 0);
     };
     resize();
     window.addEventListener("resize", resize);
@@ -162,7 +175,7 @@ export default function HeroBackground() {
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, depth);
       resize();
       ready.current = true;
-      canvas.style.opacity = window.innerWidth >= 768 ? "0.90" : "0.78";
+      canvas.style.opacity = canvas.offsetWidth < 768 ? "0.78" : "0.90";
     });
 
     // ── Scroll parallax: CSS translateY on the canvas ────────────────────────
@@ -200,7 +213,6 @@ export default function HeroBackground() {
             "radial-gradient(circle at 72% 44%, rgba(255,255,255,0.08), transparent 24%), radial-gradient(circle at 62% 78%, rgba(212,175,55,0.12), transparent 28%)",
         }}
       />
-
     </div>
   );
 }

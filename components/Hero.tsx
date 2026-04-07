@@ -69,7 +69,7 @@ export default function Hero() {
 
       <section
         id="home"
-        className="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-surface-900"
+        className="relative flex flex-col justify-start overflow-hidden bg-surface-900 md:min-h-dvh md:justify-center"
         aria-label="Homepage hero"
       >
         <HeroBackground />
@@ -98,7 +98,7 @@ export default function Hero() {
           />
         ))}
 
-        <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-7 px-6 pb-28 pt-24 [text-shadow:0_2px_18px_rgba(0,0,0,0.3)] md:gap-8">
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-7 px-6 pb-14 pt-10 [text-shadow:0_2px_18px_rgba(0,0,0,0.3)] md:gap-8 md:pb-28 md:pt-24">
           <div className="hero-item hero-item-1 flex items-center gap-3">
             <div className="h-px w-8 bg-gold-500" aria-hidden="true" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold-500">
