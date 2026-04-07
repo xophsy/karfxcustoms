@@ -2,9 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Layers, Gauge, Sparkles, type LucideIcon } from "lucide-react";
 import { ServiceCategory } from "@/lib/services-data";
 import { CATEGORY_IMAGES } from "@/lib/services-images";
+
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  "protection":               Shield,
+  "wraps-styling":            Layers,
+  "wheels-calipers-lighting": Gauge,
+  "detailing":                Sparkles,
+};
 
 type Props = {
   category: ServiceCategory;
@@ -46,7 +53,7 @@ export default function QuoteCategoryCard({
               src={img.src}
               alt=""
               fill
-              className="object-cover opacity-35 transition-opacity duration-400 group-hover:opacity-50"
+              className="object-cover opacity-60 transition-opacity duration-400 group-hover:opacity-75"
               sizes="(max-width: 640px) 100vw, 50vw"
               aria-hidden
             />
@@ -66,6 +73,21 @@ export default function QuoteCategoryCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-400 group-hover:opacity-100"
         style={{ boxShadow: "inset 0 0 60px rgba(212,175,55,0.07)" }}
       />
+
+      {/* Icon badge */}
+      {(() => {
+        const Icon = CATEGORY_ICONS[category.slug];
+        return Icon ? (
+          <div className="relative z-10 p-5 pb-0">
+            <div
+              className="flex w-10 h-10 items-center justify-center rounded-full border border-gold-500/40 bg-gold-500/10"
+              style={{ boxShadow: "0 0 14px rgba(212,175,55,0.15)" }}
+            >
+              <Icon size={18} className="text-gold-500" strokeWidth={1.5} />
+            </div>
+          </div>
+        ) : null;
+      })()}
 
       {/* Content */}
       <div className="relative z-10 mt-auto p-6 md:p-7">

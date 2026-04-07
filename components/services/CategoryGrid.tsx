@@ -3,7 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Layers, Gauge, Sparkles, type LucideIcon } from "lucide-react";
+
+const PANEL_ICONS: Record<string, LucideIcon> = {
+  "protection":             Shield,
+  "wraps-styling":          Layers,
+  "wheels-calipers-lighting": Gauge,
+  "detailing":              Sparkles,
+};
 import { SERVICE_CATEGORIES } from "@/lib/services-data";
 import { CATEGORY_IMAGES } from "@/lib/services-images";
 
@@ -73,18 +80,28 @@ function ServicePanel({
         {PANEL_NUMBERS[index]}
       </span>
 
-      {/* ── Collapsed — vertical name ────────────────────────────────────── */}
+      {/* ── Collapsed ────────────────────────────────────────────────────── */}
       {!isExpanded && (
         <motion.div
-          className="absolute inset-0 flex items-center justify-center"
+          className="absolute inset-0 flex flex-col items-center justify-center gap-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.25 }}
         >
-          <h2
-            className="font-display text-xl font-semibold tracking-widest text-white/70 select-none"
-            style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
-          >
+          {/* Icon badge */}
+          {(() => {
+            const Icon = PANEL_ICONS[slug];
+            return Icon ? (
+              <div
+                className="flex items-center justify-center w-11 h-11 rounded-full border border-gold-500/40 bg-gold-500/10"
+                style={{ boxShadow: "0 0 16px rgba(212,175,55,0.15)" }}
+              >
+                <Icon size={20} className="text-gold-500" strokeWidth={1.5} />
+              </div>
+            ) : null;
+          })()}
+          {/* Label */}
+          <h2 className="font-display text-[10px] font-bold tracking-[0.2em] uppercase text-white/90 select-none px-2 text-center leading-tight">
             {name}
           </h2>
         </motion.div>
@@ -95,7 +112,7 @@ function ServicePanel({
         <>
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/15 to-transparent pointer-events-none" />
           <motion.div
-            className="absolute inset-0 flex flex-col justify-end px-10 pb-10 md:px-12 md:pb-12 [filter:drop-shadow(0_1px_6px_rgba(0,0,0,0.9))]"
+            className="absolute inset-0 flex flex-col justify-center px-10 md:px-12 [filter:drop-shadow(0_1px_6px_rgba(0,0,0,0.9))]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.35, delay: 0.18 }}
@@ -147,7 +164,7 @@ function ServicePanel({
               {services.map((s) => (
                 <motion.span
                   key={s.name}
-                  className="font-body text-[10px] font-medium tracking-wider uppercase text-gold-500/70 border border-gold-500/20 bg-gold-500/[0.05] backdrop-blur-sm px-3 py-1.5 rounded-full"
+                  className="font-body text-[10px] font-bold tracking-wider uppercase text-gold-500 border border-gold-500 bg-black/50 backdrop-blur-sm px-3 py-1.5 rounded-full"
                   variants={{
                     hidden: { y: 10, opacity: 0 },
                     visible: { y: 0, opacity: 1, transition: { duration: 0.3, ease: "easeOut" } },
@@ -158,21 +175,22 @@ function ServicePanel({
               ))}
             </motion.div>
 
-            {/* CTA */}
-            <motion.div
-              className="group flex items-center gap-2"
-              initial={{ y: 16, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.65 }}
-            >
-              <span className="text-xs font-semibold tracking-widest uppercase text-gold-500">
-                Explore
-              </span>
-              <ArrowRight
-                size={14}
-                className="text-gold-500 transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </motion.div>
+          </motion.div>
+
+          {/* CTA — pinned to bottom */}
+          <motion.div
+            className="absolute bottom-8 left-10 md:left-12 group flex items-center gap-2"
+            initial={{ y: 16, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.65 }}
+          >
+            <span className="text-xs font-semibold tracking-widest uppercase text-gold-500">
+              Explore
+            </span>
+            <ArrowRight
+              size={14}
+              className="text-gold-500 transition-transform duration-300 group-hover:translate-x-1"
+            />
           </motion.div>
         </>
       )}
