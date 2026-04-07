@@ -116,8 +116,8 @@ export default function ServiceDetailPage({
 
         {/* ── Description + Benefits ─────────────────────────────────────── */}
         <ScrollReveal>
-          <section className="py-12 md:py-16">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
+          <section className="py-8 md:py-14">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-14">
               {/* Description */}
               <div className="space-y-4">
                 {service.description.map((p, i) => (
@@ -150,7 +150,7 @@ export default function ServiceDetailPage({
         {/* ── Gallery ──────────────────────────────────────────────────────── */}
         {images && images.gallery.length > 0 && (
           <>
-            <section className="py-12 md:py-16">
+            <section className="py-8 md:py-14">
               <ScrollReveal>
                 <h2 className="font-display text-2xl font-semibold text-white mb-8">
                   Our Work
@@ -168,9 +168,9 @@ export default function ServiceDetailPage({
             <h2 className="font-display text-2xl font-semibold text-white mb-8">
               The Process
             </h2>
-            <div className="grid gap-px bg-white/5 sm:grid-cols-3">
+            <div className="grid gap-px bg-white/5 grid-cols-1 sm:grid-cols-3">
               {service.steps.map((step, i) => (
-                <div key={i} className="relative bg-surface-900 p-6 md:p-8">
+                <div key={i} className="relative bg-surface-900 p-5 md:p-8">
                   <span className="mb-3 block text-xs font-bold tracking-[0.3em] text-gold-500/50">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -199,7 +199,7 @@ export default function ServiceDetailPage({
           <>
             <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
             <ScrollReveal>
-              <section className="py-12 md:py-16">
+              <section className="py-8 md:py-14">
                 <h2 className="font-display text-2xl font-semibold text-white mb-8">
                   FAQ
                 </h2>

@@ -13,7 +13,7 @@ export default function ServiceBreadcrumb({ crumbs }: Props) {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.15em]"
+      className="flex flex-wrap items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.15em]"
     >
       {crumbs.map((crumb, i) => (
         <span key={i} className="flex items-center gap-1">

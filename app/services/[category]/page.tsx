@@ -68,7 +68,7 @@ export default function CategoryPage({
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-surface-900 to-transparent" />
 
-        <div className="relative mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
+        <div className="relative mx-auto max-w-5xl px-5 py-9 md:px-8 md:py-20">
           <ServiceBreadcrumb
             crumbs={[
               { label: "Services", href: "/services" },

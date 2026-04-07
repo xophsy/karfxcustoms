@@ -24,6 +24,7 @@ export default function StepContact({
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Partial<ContactInfo>>({});
 
   function validate(): boolean {
@@ -39,7 +40,7 @@ export default function StepContact({
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!validate()) return;
-    onSubmit({ name: name.trim(), phone: phone.trim(), email: email.trim() });
+    onSubmit({ name: name.trim(), phone: phone.trim(), email: email.trim(), message: message.trim() || undefined });
   }
 
   return (
@@ -146,6 +147,24 @@ export default function StepContact({
             {errors.email && (
               <p className="mt-1.5 text-xs text-red-400/80">{errors.email}</p>
             )}
+          </div>
+
+          {/* Message / car details */}
+          <div>
+            <label
+              htmlFor="quote-message"
+              className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.12em] text-white/60"
+            >
+              Car & Notes <span className="normal-case tracking-normal text-white/25">(optional)</span>
+            </label>
+            <textarea
+              id="quote-message"
+              rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Year, make, model — or anything else you'd like us to know"
+              className="input-gold w-full resize-none border border-white/10 bg-surface-800 px-4 py-3 text-sm text-white placeholder-white/20 transition-colors duration-200 focus:border-gold-500 focus:outline-none focus:ring-0"
+            />
           </div>
 
           {/* Privacy reassurance */}

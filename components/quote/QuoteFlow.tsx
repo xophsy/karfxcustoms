@@ -23,6 +23,7 @@ export type ContactInfo = {
   name: string;
   phone: string;
   email: string;
+  message?: string;
 };
 
 export type QuoteStep = "categories" | "services" | "contact" | "success";

@@ -93,10 +93,10 @@ function ServicePanel({
             const Icon = PANEL_ICONS[slug];
             return Icon ? (
               <div
-                className="flex items-center justify-center w-11 h-11 rounded-full border border-gold-500/40 bg-gold-500/10"
-                style={{ boxShadow: "0 0 16px rgba(212,175,55,0.15)" }}
+                className="flex items-center justify-center w-16 h-16 rounded-full border border-gold-500/40 bg-gold-500/10"
+                style={{ boxShadow: "0 0 20px rgba(212,175,55,0.2)" }}
               >
-                <Icon size={20} className="text-gold-500" strokeWidth={1.5} />
+                <Icon size={28} className="text-gold-500" strokeWidth={1.5} />
               </div>
             ) : null;
           })()}
@@ -199,31 +199,89 @@ function ServicePanel({
 }
 
 export default function CategoryGrid() {
-  const [expanded, setExpanded] = useState<string>(SERVICE_CATEGORIES[0].slug);
+  const [expanded, setExpanded] = useState<string>("");
 
   return (
-    <div
-      className="mx-auto flex max-w-7xl overflow-hidden border border-white/5"
-      style={{ height: 560 }}
-    >
-      {SERVICE_CATEGORIES.map((cat, i) => {
-        const img = CATEGORY_IMAGES[cat.slug];
-        return (
-          <ServicePanel
-            key={cat.slug}
-            index={i}
-            slug={cat.slug}
-            name={cat.name}
-            tagline={cat.tagline}
-            gradient={cat.gradient}
-            services={cat.services}
-            imgSrc={img?.src}
-            imgAlt={img?.alt}
-            isExpanded={expanded === cat.slug}
-            onHover={() => setExpanded(cat.slug)}
-          />
-        );
-      })}
-    </div>
+    <>
+      {/* ── Desktop: horizontal accordion ──────────────────────────────── */}
+      <div
+        className="hidden md:flex mx-auto max-w-7xl overflow-hidden border border-white/5"
+        style={{ height: 560 }}
+        onMouseLeave={() => setExpanded("")}
+      >
+        {SERVICE_CATEGORIES.map((cat, i) => {
+          const img = CATEGORY_IMAGES[cat.slug];
+          return (
+            <ServicePanel
+              key={cat.slug}
+              index={i}
+              slug={cat.slug}
+              name={cat.name}
+              tagline={cat.tagline}
+              gradient={cat.gradient}
+              services={cat.services}
+              imgSrc={img?.src}
+              imgAlt={img?.alt}
+              isExpanded={expanded === cat.slug}
+              onHover={() => setExpanded(cat.slug)}
+            />
+          );
+        })}
+      </div>
+
+      {/* ── Mobile: 2×2 tap grid ────────────────────────────────────────── */}
+      <div className="grid grid-cols-2 gap-px md:hidden border border-white/5">
+        {SERVICE_CATEGORIES.map((cat, i) => {
+          const img = CATEGORY_IMAGES[cat.slug];
+          const Icon = PANEL_ICONS[cat.slug];
+          return (
+            <a
+              key={cat.slug}
+              href={`/services/${cat.slug}`}
+              className="relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-500"
+              style={{ height: 180, background: cat.gradient }}
+              aria-label={`Explore ${cat.name}`}
+            >
+              {/* Background image */}
+              {img && (
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover opacity-50"
+                  sizes="50vw"
+                />
+              )}
+              {/* Overlays */}
+              <div className="absolute inset-0 bg-black/50" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              {/* Gold top edge */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold-500 to-transparent" />
+              {/* Number */}
+              <span className="absolute top-3 left-3 font-display text-[10px] tracking-[0.3em] text-gold-500 select-none">
+                {PANEL_NUMBERS[i]}
+              </span>
+              {/* Content */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+                {Icon && (
+                  <div
+                    className="flex items-center justify-center w-10 h-10 rounded-full border border-gold-500/40 bg-gold-500/10"
+                    style={{ boxShadow: "0 0 14px rgba(212,175,55,0.15)" }}
+                  >
+                    <Icon size={18} className="text-gold-500" strokeWidth={1.5} />
+                  </div>
+                )}
+                <span className="font-display text-[11px] font-bold tracking-[0.15em] uppercase text-white text-center px-3 leading-tight">
+                  {cat.name}
+                </span>
+                <span className="flex items-center gap-1 text-[10px] font-semibold tracking-widest uppercase text-gold-500">
+                  Explore <ArrowRight size={10} />
+                </span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </>
   );
 }
