@@ -322,7 +322,7 @@ export const CATEGORY_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: "Paint protection film — KAR FX protection services",
   },
   "wraps-styling": {
-    src: CATALOG("wraps-styling.jpg"),
+    src: CATALOG("wraps-styling-v2.jpg"),
     alt: "Color change wrap — KAR FX wraps and styling services",
   },
   "wheels-calipers-lighting": {
