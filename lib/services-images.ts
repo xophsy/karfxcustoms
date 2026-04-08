@@ -234,7 +234,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   },
 
   "wheels-calipers-lighting/reflective-calipers": {
-    hero: GALLERY("wheels.jpg"),
+    hero: GALLERY("reflective-calipers.avif"),
     heroAlt: "Reflective caliper finish — metallic coating catching light through spokes",
     gallery: [
       {
