@@ -49,7 +49,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   // ── PROTECTION ─────────────────────────────────────────────────────────────
 
   "protection/ppf": {
-    hero: CATALOG("ppf.jpg"),
+    hero: GALLERY("IMG_0073.jpg"),
     heroAlt: "Paint protection film installation on vehicle hood — Raleigh NC",
     gallery: [
       {
