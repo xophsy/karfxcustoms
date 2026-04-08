@@ -114,7 +114,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   // ── WRAPS & STYLING ────────────────────────────────────────────────────────
 
   "wraps-styling/color-change-wrap": {
-    hero: CATALOG("color-change.jpg"),
+    hero: CATALOG("color-change-v2.jpg"),
     heroAlt: "Full vehicle color change wrap — premium vinyl finish",
     gallery: [
       {
