@@ -318,7 +318,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
 
 export const CATEGORY_IMAGES: Record<string, { src: string; alt: string }> = {
   protection: {
-    src: CATALOG("ppf.jpg"),
+    src: CATALOG("protection.jpg"),
     alt: "Paint protection film — KAR FX protection services",
   },
   "wraps-styling": {
