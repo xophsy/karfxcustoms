@@ -171,25 +171,6 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
     ],
   },
 
-  "wraps-styling/signage": {
-    hero: GALLERY("commercial.jpg"),
-    heroAlt: "Professional business signage — clean and branded",
-    gallery: [
-      {
-        src: GALLERY("tarifa-comercial.jpg"),
-        alt: "Cut vinyl lettering applied to glass window — storefront",
-      },
-      {
-        src: GALLERY("commercial.jpg"),
-        alt: "Branded panel signage in outdoor environment",
-      },
-      {
-        src: GALLERY("wraps.jpg"),
-        alt: "Vehicle door graphics and partial logo wrap",
-      },
-    ],
-  },
-
   // ── WHEELS, CALIPERS & LIGHTING ────────────────────────────────────────────
 
   "wheels-calipers-lighting/wheel-painting": {

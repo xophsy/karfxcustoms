@@ -352,57 +352,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             a: "Quality commercial wraps typically last 4–6 years depending on vehicle use, exposure, and care.",
           },
         ],
-        relatedSlugs: ["signage", "color-change-wrap"],
+        relatedSlugs: ["color-change-wrap"],
         cardGradient:
           "linear-gradient(135deg, #081814 0%, #142820 60%, #0a1e18 100%)",
         heroGradient:
           "linear-gradient(160deg, #040e0a 0%, #0e2018 40%, #081a12 100%)",
-      },
-      {
-        slug: "signage",
-        name: "Signage",
-        tagline:
-          "Make your business easier to notice with clean, professional signage built to stand out.",
-        description: [
-          "From storefront lettering to site signage and branded displays, professional signage helps your business create a strong first impression and stay visible to passing customers. Poor or aging signage undercuts an otherwise strong brand — sharp signage reinforces it.",
-          "KAR FX Customs produces custom signage for businesses in the Raleigh area, including cut vinyl lettering, printed panels, window graphics, and branded displays. Every piece is built to be clearly legible, visually clean, and durable against outdoor conditions.",
-        ],
-        isB2B: true,
-        benefits: [
-          "Creates a strong, professional first impression for customers",
-          "Built for outdoor durability in all weather conditions",
-          "Custom-designed to match your brand visuals",
-          "Increases visibility and walk-in discovery for local businesses",
-        ],
-        steps: [
-          {
-            title: "Brief & Scope",
-            desc: "We discuss your signage needs, location, dimensions, and brand requirements.",
-          },
-          {
-            title: "Design & Proof",
-            desc: "We produce a design proof for your review before production begins.",
-          },
-          {
-            title: "Production & Install",
-            desc: "Signage is produced on professional materials and installed cleanly.",
-          },
-        ],
-        faq: [
-          {
-            q: "What types of signage do you produce?",
-            a: "Cut vinyl lettering, printed window graphics, panel signage, and branded vehicle graphics. Contact us to discuss your specific needs.",
-          },
-          {
-            q: "How long does outdoor signage last?",
-            a: "Material choice affects lifespan. Our standard outdoor materials are rated 5–7 years. We can discuss options based on your exposure and environment.",
-          },
-        ],
-        relatedSlugs: ["commercial-wraps"],
-        cardGradient:
-          "linear-gradient(135deg, #081020 0%, #101c30 60%, #0c1828 100%)",
-        heroGradient:
-          "linear-gradient(160deg, #040a14 0%, #0c1828 40%, #081220 100%)",
       },
     ],
   },
