@@ -92,7 +92,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   },
 
   "protection/headlight-tint": {
-    hero: GALLERY("IMG_7069.jpg"),
+    hero: GALLERY("headlight-tint.jpg"),
     heroAlt: "Headlight and taillight tint — smoked lens finish",
     gallery: [
       {
