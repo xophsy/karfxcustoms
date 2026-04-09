@@ -307,7 +307,7 @@ export const CATEGORY_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: "Color change wrap — KAR FX wraps and styling services",
   },
   "wheels-calipers-lighting": {
-    src: CATALOG("wheels.jpg"),
+    src: CATALOG("wheels-v2.jpg"),
     alt: "Painted wheels and calipers — KAR FX wheel and lighting services",
   },
   detailing: {
