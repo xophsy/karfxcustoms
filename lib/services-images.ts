@@ -174,7 +174,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   // ── WHEELS, CALIPERS & LIGHTING ────────────────────────────────────────────
 
   "wheels-calipers-lighting/wheel-painting": {
-    hero: CATALOG("wheels.jpg"),
+    hero: CATALOG("wheels-v2.jpg"),
     heroAlt: "Custom painted wheels — professional automotive finish",
     gallery: [
       {
