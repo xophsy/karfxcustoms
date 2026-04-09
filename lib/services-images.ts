@@ -153,7 +153,7 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   },
 
   "wraps-styling/commercial-wraps": {
-    hero: CATALOG("commercial.jpg"),
+    hero: CATALOG("commercial-v2.jpg"),
     heroAlt: "Commercial vehicle wrap with business branding — full vehicle",
     gallery: [
       {
