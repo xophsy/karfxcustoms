@@ -46,15 +46,15 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         slug: "ppf",
         name: "Paint Protection Film",
         tagline:
-          "Keep your paint looking newer longer by protecting it from rock chips, scratches, and road damage.",
+          "Keep your paint looking newer and longer by protecting it from rock chips, scratches, and road damage.",
         description: [
-          "Paint Protection Film (PPF) is a virtually invisible urethane film applied directly to your vehicle's painted surfaces. It acts as a physical barrier between your paint and the road — absorbing impacts from rock chips, gravel, bug splatter, and minor abrasions before they ever reach your finish.",
+          "Paint Protection Film (PPF) is a durable, transparent, thermoplastic urethane film applied directly to your vehicle's painted surfaces. It acts as a physical barrier between your paint and the road — absorbing impacts from rock chips, gravel, bug splatter, and minor abrasions before they ever reach your finish.",
           "At KAR FX Customs, we install PPF with precision fitment on full vehicles, partial coverage (hood, fenders, mirrors, rocker panels), or any custom zone you need protected. Premium film options include self-healing technology that removes light scratches with heat from the sun or warm water.",
         ],
         benefits: [
           "Protects against rock chips, road debris, and minor scratches",
           "Self-healing surface on select film options",
-          "Virtually invisible — maintains factory gloss and color",
+          "Invisible \u2014 maintains factory gloss and color",
           "Preserves resale value over the life of the vehicle",
         ],
         steps: [
@@ -63,18 +63,18 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
             desc: "We assess your vehicle and discuss coverage zones, film options, and pricing.",
           },
           {
-            title: "Paint Prep & Install",
-            desc: "Paint is cleaned and decontaminated, then film is precision-cut and applied.",
+            title: "Paint Prep & Installation",
+            desc: "Paint is cleaned and decontaminated, then the film is cut with precision and added.",
           },
           {
             title: "Final Inspection",
-            desc: "We review every edge and seam with you before you drive away protected.",
+            desc: "We review every edge and seam with you before you drive away.",
           },
         ],
         faq: [
           {
             q: "How long does PPF last?",
-            a: "Quality PPF typically lasts 5–10 years depending on the film grade, care, and exposure. We'll walk you through the right option for your use case.",
+            a: "Quality PPF typically lasts 5–10 years depending on the film grade, care, and exposure. We'll walk you through the right option for your case.",
           },
           {
             q: "Is PPF visible on the vehicle?",
@@ -82,7 +82,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             q: "Can PPF be removed later?",
-            a: "Yes. PPF can be safely removed by a professional without damaging the underlying paint, especially when the paint was in good condition at install.",
+            a: "Yes. PPF can be safely removed by a professional without damaging the underlying paint, especially when the paint was in good condition at installation.",
           },
           {
             q: "Do I need to prep my paint first?",
@@ -97,12 +97,12 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
       {
         slug: "window-tint",
-        name: "Window Tint",
+        name: "Window Tinting",
         tagline:
           "Stay cooler, reduce glare, and give your vehicle a cleaner, more private look.",
         description: [
-          "Window tinting reduces solar heat, cuts glare, and adds a layer of privacy — all while giving your vehicle a sharper, more refined appearance. The right tint film also blocks UV rays that fade interiors and cause skin damage over time.",
-          "KAR FX Customs installs professional-grade window film with precision edge-to-edge fitment. We offer a range of tint levels from subtle to dark, including ceramic options for maximum heat rejection without signal interference.",
+          "Window tinting reduces solar heat, cuts glare, and adds a layer of privacy — all while giving your vehicle a sharper, more refined appearance. The right tinting film also blocks UV rays that fade interiors and cause skin damage over time.",
+          "KAR FX Customs installs professional-grade window films with precision edge-to-edge fitment. We offer a range of tint levels from subtle to dark, including ceramic options for maximum heat rejection without signal interference.",
         ],
         benefits: [
           "Blocks UV rays that damage skin and fade interiors",
@@ -113,7 +113,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         steps: [
           {
             title: "Film Selection",
-            desc: "We help you choose the right shade and film grade based on your goals and local tint laws.",
+            desc: "We help you choose the right shade and film grade based on your goals and local tinting laws.",
           },
           {
             title: "Professional Install",
@@ -131,7 +131,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             q: "Will tint interfere with my phone or GPS signal?",
-            a: "Standard metallic films can affect signal. Our ceramic film options provide the same heat rejection without any signal interference.",
+            a: "Standard metallic films can affect signals. Our ceramic film options provide the same heat rejection without any signal interference.",
           },
           {
             q: "How long does window tint last?",
@@ -146,7 +146,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
       },
       {
         slug: "headlight-tint",
-        name: "Headlight / Taillight Tint",
+        name: "Headlight / Taillight Tinting",
         tagline:
           "Sharpen your vehicle's look with tinted lighting that adds style and a more customized finish.",
         description: [
@@ -156,17 +156,17 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         benefits: [
           "Instantly changes the visual character of your exterior",
           "Film-based — fully reversible if you want to restore stock look",
-          "Clean, sharp edges with no overspray or residue",
+          "Clean, sharp edges with no overspray or residues",
           "Available in multiple tint levels for subtle or bold results",
         ],
         steps: [
           {
             title: "Shade Selection",
-            desc: "Choose your tint intensity — from a subtle smoke to a dark blacked-out look.",
+            desc: "Choose your tint level intensity \u2014 from a subtle smoke to a dark blacked-out look.",
           },
           {
-            title: "Lens Prep & Film Apply",
-            desc: "Lenses are cleaned and decontaminated, then film is precisely cut and applied.",
+            title: "Lens Prep & Film Application",
+            desc: "Lenses are cleaned and decontaminated, then film is meticulously cut and applied.",
           },
           {
             title: "Edge Seal & Inspection",
@@ -200,9 +200,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     slug: "wraps-styling",
     name: "Wraps & Styling",
-    tagline: "Change the look. Express the character.",
+    tagline: "Change the look. Express yourself",
     description:
-      "From full color change wraps to chrome deletes and commercial fleet branding, our wraps and styling services let you transform your vehicle — or your brand — with professional vinyl work built to last.",
+      "From full color change wraps to chrome deletes and commercial fleet branding, our wraps and styling services let you transform your vehicle — or your brand — with professional vinyl work made to last.",
     gradient:
       "linear-gradient(135deg, #0a0e1a 0%, #141c30 50%, #0c1020 100%)",
     services: [
@@ -213,7 +213,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           "Transform your vehicle's entire look with a fresh color and finish without committing to new paint.",
         description: [
           "A full color change wrap replaces the visual appearance of your factory paint with a new color, finish, or texture — without permanently altering the vehicle. Satin black, matte midnight blue, brushed bronze, gloss white, color-shift chameleon — the options are far wider than traditional paint.",
-          "KAR FX Customs installs full-vehicle wraps with precise panel-by-panel fitment. Vinyl protects the original paint underneath, and the wrap can be removed cleanly when you're ready for a new look or want to restore stock appearance for resale.",
+          "KAR FX Customs installs full-vehicle wraps with accurate panel-by-panel fitment. Vinyl protects the original paint underneath, and the wrap can be removed cleanly when you're ready for a new look or want to restore stock appearance for resale.",
         ],
         benefits: [
           "Completely transforms the exterior without permanent paint changes",
@@ -228,7 +228,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             title: "Vehicle Prep & Wrap",
-            desc: "Paint is cleaned and decontaminated; vinyl is applied panel-by-panel with precision.",
+            desc: "Paint is cleaned and decontaminated; vinyl is applied panel-by-panel with rigorousness.",
           },
           {
             title: "Trim & Final Inspection",
@@ -335,7 +335,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             title: "Print, Laminate & Install",
-            desc: "Wrap is printed on commercial-grade film, laminated, and installed with precision.",
+            desc: "Wrap is printed on commercial-grade film, laminated, and installed with carefulness.",
           },
         ],
         faq: [
@@ -349,7 +349,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             q: "How long will a commercial wrap last?",
-            a: "Quality commercial wraps typically last 4–6 years depending on vehicle use, exposure, and care.",
+            a: "Quality commercial wraps typically last 4–6 years depending on vehicle use, exposure to weather, and care.",
           },
         ],
         relatedSlugs: ["color-change-wrap"],
@@ -358,6 +358,52 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         heroGradient:
           "linear-gradient(160deg, #040e0a 0%, #0e2018 40%, #081a12 100%)",
       },
+      {
+        slug: "signage",
+        name: "Signage",
+        tagline:
+          "Make your business easier to notice with clean, professional signage crafted to be remembered.",
+        description: [
+          "From storefront lettering to site signage and branded displays, professional signage helps your business create a strong first impression and stay visible to passing customers. Poor or aging signage undercuts an otherwise strong brand \u2014 sharp signage reinforces it.",
+          "KAR FX Customs produces custom signage for businesses in the Raleigh area and surroundings, including cut vinyl lettering, printed panels, window graphics, and branded displays. Every piece is designed to be clearly legible, visually clean, and durable against outdoor conditions.",
+        ],
+        isB2B: true,
+        benefits: [
+          "Creates a strong, professional first impression for customers",
+          "Built for outdoor durability in all weather conditions",
+          "Custom-designed to match your brand visuals",
+          "Increases visibility and walk-in discovery for local businesses",
+        ],
+        steps: [
+          {
+            title: "Brief & Scope",
+            desc: "We discuss your signage needs, location, dimensions, and brand requirements.",
+          },
+          {
+            title: "Design & Proof",
+            desc: "We produce a design proof for your review before the process begins.",
+          },
+          {
+            title: "Production & Install",
+            desc: "Signage is developed on professional materials and installed neatly.",
+          },
+        ],
+        faq: [
+          {
+            q: "What types of signage do you produce?",
+            a: "Cut vinyl lettering, printed window graphics, panel signage, and branded vehicle graphics. Contact us to discuss your specific needs.",
+          },
+          {
+            q: "How long does outdoor signage last?",
+            a: "Material choice affects lifespan. Our standard outdoor materials are rated 5?7 years. We can discuss options based on your exposure and environment.",
+          },
+        ],
+        relatedSlugs: ["commercial-wraps", "color-change-wrap"],
+        cardGradient:
+          "linear-gradient(135deg, #10120a 0%, #242814 60%, #161a0c 100%)",
+        heroGradient:
+          "linear-gradient(160deg, #080a04 0%, #181c0e 40%, #101406 100%)",
+      },
     ],
   },
 
@@ -365,7 +411,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     slug: "wheels-calipers-lighting",
     name: "Wheels, Calipers & Lighting",
-    tagline: "Details that define the difference.",
+    tagline: "Details that make the difference.",
     description:
       "The finishing details that separate a well-built vehicle from a truly custom one. Painted wheels, bold caliper work, a starlight headliner, or ambient interior lighting — these are the upgrades that make people look twice.",
     gradient:
@@ -378,7 +424,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           "Refresh or customize your wheels with a finish that instantly upgrades your vehicle's overall look.",
         description: [
           "Your wheels are one of the most visible elements on your vehicle — and one of the fastest ways to elevate or drag down the entire exterior. Wheel painting gives you the ability to refresh faded or scuffed wheels back to like-new condition, or take them in a completely custom direction with a new color or finish.",
-          "We prep, prime, and finish your wheels with durable automotive paint designed to hold up against brake dust, road debris, and cleaning products. Whether you want gloss black, gunmetal, bronze, or color-matched to your vehicle, we deliver a clean, lasting result.",
+          "We prep, prime, and finish your wheels with durable automotive paint designed to hold up against brake dust, road debris, and cleaning products. Whether you want gloss black, gunmetal, bronze, or color-matched to your vehicle, we deliver reliable enduring results.",
         ],
         benefits: [
           "Instantly refreshes or transforms the look of your wheels",
@@ -389,7 +435,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         steps: [
           {
             title: "Wheel Assessment",
-            desc: "We inspect condition, discuss your color and finish goals, and confirm prep requirements.",
+            desc: "We inspect conditions, discuss your color and finish goals, and confirm prep requirements.",
           },
           {
             title: "Strip, Prep & Paint",
@@ -428,16 +474,16 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         slug: "caliper-painting",
         name: "Caliper Painting",
         tagline:
-          "Add a bold performance-inspired detail that makes your wheel setup stand out.",
+          "Add a bold performance-inspired detail that makes your wheel setup with distinction.",
         description: [
-          "Painted brake calipers are one of the classic high-visibility details on a well-built vehicle. Visible through the spokes of your wheels, a sharply painted caliper in red, yellow, gold, or any custom color signals attention to detail and adds a genuine performance feel to the setup.",
-          "We use high-temperature automotive paint formulated specifically for brake calipers — capable of handling the extreme heat cycles that brake components produce. The result is a finish that stays sharp and doesn't crack, peel, or fade under real driving conditions.",
+          "Painted brake calipers are one of the classic high-visibility details on a well-built vehicle. Visible through the spokes of your wheels, a sharply painted caliper in red, yellow, gold, or any custom color signals attention to detail and adds a genuine performance feel to the structure.",
+          "We use high-temperature automotive paint formulated specifically for brake calipers — capable of handling the extreme heat cycles that brake components generate. The result is a finish that stays sharp and doesn't crack, peel, or fade under real driving conditions.",
         ],
         benefits: [
           "High-visibility upgrade visible through wheel spokes",
           "High-temp paint formulated for brake caliper heat cycles",
           "Available in any custom color — not just red",
-          "Cleans up cleanly against painted or polished wheels",
+          "Cleans up easily against painted or polished wheels",
         ],
         steps: [
           {
@@ -460,7 +506,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             q: "Will painted calipers hold up to heat?",
-            a: "Yes — we use high-temperature caliper paint rated for the heat cycles brake components produce. It won't crack or peel under normal driving.",
+            a: "Yes — we use high-temperature caliper paint rated for the heat cycles brake components generate. It won't crack or peel under normal driving.",
           },
           {
             q: "Can you add a logo or text to calipers?",
@@ -481,7 +527,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         slug: "reflective-calipers",
         name: "Reflective Calipers",
         tagline:
-          "Give your brakes a unique high-impact finish that grabs attention and adds custom character.",
+          "Give your brakes a unique high-impact finish that grabs attention and adds custom characterization.",
         description: [
           "Reflective caliper finishing takes standard painted calipers to a different level. Using specialized reflective or metallic-effect coatings, the finish catches light and creates an eye-catching effect that sets your brake setup apart from anything stock.",
           "This is a distinctive, conversation-starting detail — especially effective at car shows, events, or simply at night under parking lot lighting. It pairs well with both blacked-out and polished wheel setups and can be executed in silver, chrome-effect, or multi-tone reflective finishes.",
@@ -503,13 +549,13 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             title: "Seal & Cure",
-            desc: "A protective seal layer is applied over the reflective finish before reinstall.",
+            desc: "A protective seal layer is applied over the reflective finish before reinstallation.",
           },
         ],
         faq: [
           {
             q: "How is this different from standard caliper painting?",
-            a: "Reflective calipers use specialized coatings that catch and return light differently than standard paint — creating a metallic or chrome-like visual effect.",
+            a: "Reflective calipers use specialized coatings that catch and return light differently than regular paint — creating a metallic or chrome-like visual effect.",
           },
           {
             q: "Will the reflective finish hold up to heat?",
@@ -548,11 +594,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             title: "Headliner Build & Install",
-            desc: "Headliner is built with fiber strands threaded and secured, then installed in the vehicle.",
+            desc: "The headliner is built with fiber strands threaded and secured, then it is installed in the vehicle.",
           },
           {
             title: "Wiring & Final Test",
-            desc: "Electrical connections are made, the full effect is tested, and cabin is restored.",
+            desc: "Electrical connections are made, the full effect is tested, and the cabin is restored.",
           },
         ],
         faq: [
@@ -590,12 +636,12 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           "Upgrade your interior with customizable lighting that adds color, mood, and a more premium driving experience.",
         description: [
           "Ambient interior lighting adds programmable LED strips throughout the cabin — footwells, door panels, dashboard accents, under-seat glow, and more. The result is a more premium, immersive interior feel that can be tuned to match your mood, music, or driving preference.",
-          "KAR FX Customs installs clean, professional ambient lighting systems with controller-based or app-based color selection. We route wiring invisibly and mount strips securely so the result looks factory-integrated — not afterthought.",
+          "KAR FX Customs installs tidy, professional ambient lighting systems with controller-based or app-based color selection. We route wiring invisibly and mount strips securely so the result looks factory-integrated — not afterthought.",
         ],
         benefits: [
           "Adds color, depth, and a premium feel to the interior",
           "Fully customizable color and brightness via controller or app",
-          "Clean, professional install with hidden wiring",
+          "Clean, professional installation with hidden wiring",
           "Works in footwells, door panels, dash, and under seats",
         ],
         steps: [
@@ -605,11 +651,11 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             title: "Wiring & Strip Install",
-            desc: "Strips are mounted and wiring is routed cleanly through the interior panels.",
+            desc: "Strips are mounted and wiring is routed through the interior panels.",
           },
           {
             title: "Controller Setup & Test",
-            desc: "Controller is installed and tested with you to confirm full operation.",
+            desc: "The controller is installed and tested with you to confirm full operation.",
           },
         ],
         faq: [
@@ -645,7 +691,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     name: "Detailing",
     tagline: "A cleaner, sharper vehicle — inside and out.",
     description:
-      "Professional detailing goes far beyond a standard wash. We restore, protect, and present your vehicle at its best — removing contamination, restoring surface clarity, and leaving every surface looking and feeling better than it did before.",
+      "Professional detailing goes far beyond a standard wash. All vehicles are handwashed. We restore, protect, and present your vehicle at its best — removing contamination, restoring surface clarity, and leaving every surface looking and feeling better than it did before.",
     gradient:
       "linear-gradient(135deg, #0a1010 0%, #141e1e 50%, #0c1616 100%)",
     services: [
@@ -655,14 +701,19 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         tagline:
           "Restore a cleaner, glossier, better-kept look inside and out with a deep refresh for your vehicle.",
         description: [
-          "A professional detail is a complete reset for your vehicle's appearance. On the exterior, that means a thorough decontamination wash, clay bar treatment to remove bonded surface contamination, paint polish to restore gloss, and a protective sealant to maintain it. On the interior, it means deep cleaning every surface — seats, carpets, door panels, dash, glass, and vents.",
-          "KAR FX Customs offers single-service exterior or interior details, full combined packages, and add-on services like engine bay cleaning, leather conditioning, and paint decontamination. We treat every vehicle with care and deliver results that make a visible difference.",
+          "A professional detail is a complete reset for your vehicle's appearance. On the exterior, that means a thorough decontamination handwash, clay bar treatment to remove bonded surface contamination, paint polish to restore gloss, and a protective sealant to maintain it. On the interior, it means deep cleaning every surface — seats, carpets, door panels, dash, glass, and vents.",
+          "KAR FX Customs offers single-service exterior or/and interior details, full combined packages, and add-on services like engine bay cleaning, leather conditioning, and paint decontamination. We treat every vehicle with care and deliver results that make a visible difference.",
         ],
         benefits: [
           "Removes surface contamination that regular washing leaves behind",
           "Restores paint gloss and clarity with polish or light correction",
           "Deep interior cleaning removes odors, stains, and built-up grime",
           "Protective sealant extends the life of the clean result",
+          "Handwashing provides a deeper, safer, and more personalized level of care compared to automatic car washes.",
+          "By manually cleaning your vehicle, you can protect its paint, maintain its long-term value, and identify maintenance issues early.",
+          "Handwashing allows you to reach small crevices and hard-to-access spots that machines often miss.",
+          "Automatic washes use high-speed brushes which can trap dirt and cause micro-scratches or \"swirl marks\".",
+          "Maintains the integrity of Car Wax and Sealants, whereas the harsh chemicals used in many automatic washes can strip these protective coatings.",
         ],
         steps: [
           {
@@ -671,7 +722,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             title: "Full Detail Process",
-            desc: "Exterior decontamination, polish, and sealant. Interior deep clean from top to bottom.",
+            desc: "Exterior decontamination, polish, and sealant. The interior is deep cleaned from top to bottom, with the most caring touch.",
           },
           {
             title: "Final Inspection",
@@ -689,7 +740,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           },
           {
             q: "How often should I get my vehicle detailed?",
-            a: "Most owners benefit from a full detail every 3–6 months for daily-driven vehicles. More frequent maintenance details can extend the time between deep cleans.",
+            a: "Most owners benefit from a full detail of at least once a month for daily-driven vehicles. More frequent maintenance details can extend the time between deep cleans.",
           },
           {
             q: "Do you offer just an interior or just an exterior detail?",

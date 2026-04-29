@@ -149,10 +149,10 @@ export default function WorkShowcase() {
             Our Work
           </p>
           <h2 className="font-display text-3xl font-semibold text-white md:text-4xl">
-            Built in Raleigh. Finished Right.
+            Fashioned in Raleigh. Finished Right.
           </h2>
           <div className="gold-divider mt-4" />
-          <p className="mt-3 text-sm text-white/60">Every job in the portfolio. Real work, real vehicles.</p>
+          <p className="mt-3 text-sm text-white/60">Every job in the portfolio is a real work, real vehicles.</p>
         </div>
         <Link
           href="/portfolio"

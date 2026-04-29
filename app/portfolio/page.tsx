@@ -139,7 +139,7 @@ export default function PortfolioPage() {
               Ready for Your Vehicle?
             </p>
             <h2 className="font-display text-2xl font-semibold text-white md:text-3xl">
-              Let&apos;s talk about your build.
+              Let&apos;s talk about your desire
             </h2>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-white/50">
               Every project in this gallery started with a quote. Tell us what

@@ -41,9 +41,9 @@ export default function FinalCTA() {
         </div>
 
         <h2 className="mb-5 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
-          Your Build
+          Care
           <br />
-          <span className="text-gold-gradient italic">Starts Here.</span>
+          <span className="text-gold-gradient italic">starts here.</span>
         </h2>
 
         <p className="mb-10 text-base leading-relaxed text-white/60">

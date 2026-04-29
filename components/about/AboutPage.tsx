@@ -12,8 +12,8 @@ import { BUSINESS_INFO } from "@/lib/business";
 
 const VALUES = [
   {
-    label: "Precision on every install",
-    body: "We don't rush. The time it takes to do it right is built into how we work.",
+    label: "Precision on every work performed",
+    body: "We don't rush. The time it takes to do it right is included into how we work.",
   },
   {
     label: "Real communication",
@@ -21,7 +21,7 @@ const VALUES = [
   },
   {
     label: "Consistent standards across the team",
-    body: "The expectation doesn't change based on who's handling your vehicle.",
+    body: "The eagerness of meticulousness doesn't change based on who's handling your vehicle.",
   },
   {
     label: "Raleigh-based, by appointment",
@@ -67,7 +67,7 @@ export default function AboutPage() {
 
                 {/* Headline */}
                 <h1 className="font-display text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-                  Built on a Standard,
+                  Standards of Excellence,
                   <br />
                   <span className="text-gold-gradient">Not a Slogan.</span>
                 </h1>
@@ -77,10 +77,11 @@ export default function AboutPage() {
               <ScrollReveal delay={0.1}>
                 <p className="mt-8 text-base leading-relaxed text-white/55 md:text-lg">
                   Most shops can do the work. What separates KAR FX Customs is the
-                  standard behind it. In Raleigh, Carlos and Mauricio have built a
-                  team where precision isn&apos;t occasional — it&apos;s the
-                  baseline. Every vehicle that comes through this shop is treated
-                  like it matters, because to the people doing the work, it does.
+                  standard behind it. In Raleigh, Carlos and Mauricio have created
+                  a team where excellence and precision aren&apos;t occasional — it&apos;s
+                  the baseline. Every vehicle that comes through this shop is
+                  treated like a &quot;proud possession&quot;. Each individual in our
+                  workshop matters about it as it was one of our own vehicles.
                 </p>
               </ScrollReveal>
             </div>
@@ -131,7 +132,7 @@ export default function AboutPage() {
                 </p>
 
                 <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-                  Carlos and Mauricio built this shop around one idea: do the work right.
+                  Carlos and Mauricio founded this business around one idea: Superior
                 </h2>
               </ScrollReveal>
 
@@ -141,23 +142,24 @@ export default function AboutPage() {
                 <div className="space-y-5 text-base leading-relaxed text-white/55">
                   <p>
                     Carlos and Mauricio are the reason KAR FX Customs runs the way
-                    it does. Between them, they&apos;ve built a culture where
+                    it does. Between them, they&apos;ve shaped a culture where
                     attention to detail isn&apos;t a selling point — it&apos;s an
-                    expectation. Every product choice, every install process, every
-                    interaction with a customer reflects what they&apos;ve put into
-                    this shop.
+                    expectation. Every product choice, every installation process,
+                    every interaction with a customer reflects what they&apos;ve put
+                    into this shop.
                   </p>
                   <p>
                     Carlos brings a level of precision to his work that customers
-                    notice immediately. He doesn&apos;t just complete jobs — he
-                    checks them. Mauricio brings that same care to how the shop
-                    runs: how customers are communicated with, how timelines are
-                    managed, how the final result is presented.
+                    notice immediately. He doesn&apos;t just complete jobs — he cares
+                    how the final results are presented. Mauricio brings the same
+                    high expectations to how the shop runs: how customers are
+                    communicated with, how timelines are managed, how the final
+                    result is presented.
                   </p>
                   <p>
-                    Together, they&apos;ve created an environment where the work is
-                    taken seriously at every step — not because it&apos;s required,
-                    but because that&apos;s how both of them are built.
+                    Together, they&apos;ve created an environment where the work is taken
+                    seriously at every step — not only because..... but also
+                    because satisfaction is their main goal.
                   </p>
                 </div>
               </ScrollReveal>
@@ -180,8 +182,8 @@ export default function AboutPage() {
                 </p>
 
                 <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
-                  What they&apos;ve built isn&apos;t just two good technicians —
-                  it&apos;s a team that operates by the same standard.
+                  What they&apos;ve framed isn&apos;t just good technicians — it&apos;s a team
+                  that operates by the same ethics.
                 </h2>
               </ScrollReveal>
 
@@ -191,14 +193,14 @@ export default function AboutPage() {
                 <div className="space-y-5 text-base leading-relaxed text-white/55">
                   <p>
                     When a vehicle comes in for a full color change wrap, a PPF
-                    install, a tint job, or a restoration, every person involved
+                    installation, a tinting job, or a restoration, every person involved
                     understands what the finished result needs to look like. That
                     expectation doesn&apos;t change based on who&apos;s on the job.
                   </p>
                   <p>
                     This consistency is what keeps customers coming back and
                     referring others. It&apos;s not a policy. It&apos;s a culture —
-                    and it shows in the work.
+                    and it is shown in the work.
                   </p>
                 </div>
               </ScrollReveal>
@@ -227,7 +229,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl">
           <ScrollReveal>
             <p className="mb-10 text-[10px] font-semibold uppercase tracking-[0.25em] text-gold-500/60">
-              What That Looks Like in Practice
+              What That Looks in Practice
             </p>
           </ScrollReveal>
 
@@ -267,8 +269,8 @@ export default function AboutPage() {
                   The work is the reputation.
                 </h2>
                 <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/45">
-                  Browse recent projects or get in touch — whichever path makes
-                  more sense for you right now.
+                  Browse our gallery of jobs or get in touch {"\u2014"} whichever path makes
+                  you more confident. We are here to serve you.
                 </p>
               </div>
 

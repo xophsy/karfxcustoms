@@ -40,7 +40,7 @@ export default function Home() {
               <span className="text-gold-gradient italic">Done with Intent.</span>
             </h2>
             <p className="mt-4 text-base text-white/60 max-w-xl mx-auto">
-              Every job deliberate. Every finish worth protecting.
+              Every job is deliberate. Every finish is worth protecting.
             </p>
           </ScrollReveal>
 

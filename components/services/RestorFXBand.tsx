@@ -35,9 +35,10 @@ export default function RestorFXBand() {
               For paint restoration, we proudly work alongside{" "}
               <span className="text-white/80 font-medium">RestorFX</span> — our
               trusted partner for specialized clearcoat repair and restoration.
-              Whether your paint needs correction before a wrap or PPF install, or
-              you&apos;re dealing with fading and oxidation, RestorFX delivers
-              results that standard detailing can&apos;t match.
+              Whether your paint needs correction before a wrap or PPF installation,
+              or you&apos;re dealing with fading and oxidation, RestorFX outperforms
+              results that no conventional or traditional process can&apos;t achieve.
+              A technology that restores surfaces to look like-new conditions.
             </p>
 
             {/* CTA row */}
