@@ -1,4 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
+﻿// ─────────────────────────────────────────────────────────────────────────────
 // KAR FX Customs — Services Data
 // Single source of truth for all service categories, sub-services, and content.
 // All pages are driven from this file. To add or update a service, edit here.
@@ -193,6 +193,59 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         heroGradient:
           "linear-gradient(160deg, #100c04 0%, #221604 40%, #1a1006 100%)",
       },
+      {
+        slug: "ceramic-coats",
+        name: "Ceramic Coating",
+        tagline:
+          "Bond lasting protection directly to your paint for a deep, hydrophobic gloss that's easy to maintain.",
+        description: [
+          "Ceramic coating is a liquid polymer that chemically bonds to your vehicle's painted surfaces, creating a semi-permanent protective layer that water, dirt, and contaminants can't penetrate. Unlike traditional wax or sealant that sits on top of the paint and breaks down over months, ceramic coating becomes part of the surface — delivering protection that lasts years, not weeks.",
+          "At KAR FX Customs, we prep the paint thoroughly before every ceramic install — removing contamination, correcting surface defects where needed, and ensuring the coating bonds to a clean, flawless foundation. The result is a deep, glass-like gloss that stays cleaner longer and is far easier to maintain.",
+        ],
+        benefits: [
+          "Hydrophobic surface causes water and dirt to bead off easily",
+          "Chemical resistance protects against environmental contaminants",
+          "Enhances gloss and paint clarity significantly",
+          "Lasts years with proper maintenance — not weeks like wax",
+        ],
+        steps: [
+          {
+            title: "Paint Decontamination",
+            desc: "The surface is fully washed, clayed, and decontaminated before any coating is applied.",
+          },
+          {
+            title: "Correction (If Needed)",
+            desc: "Any swirl marks or surface defects are addressed so the coating locks in a perfect finish.",
+          },
+          {
+            title: "Coating Application",
+            desc: "Ceramic is applied panel by panel and leveled under controlled conditions before curing.",
+          },
+        ],
+        faq: [
+          {
+            q: "How long does ceramic coating last?",
+            a: "Depending on the product tier and how the vehicle is maintained, ceramic coatings typically last 2–5 years. Professional-grade coatings with regular maintenance can exceed that.",
+          },
+          {
+            q: "Does ceramic coating prevent rock chips?",
+            a: "No — ceramic coating doesn't provide impact protection. It protects against chemical damage, UV, and contamination. For chip protection, PPF is the right product.",
+          },
+          {
+            q: "Do I need paint correction before ceramic coating?",
+            a: "If your paint has swirl marks or scratches, yes — ceramic will lock in whatever's underneath. We assess the paint at consultation and recommend the right prep level.",
+          },
+          {
+            q: "Can ceramic coating be applied over PPF?",
+            a: "Yes. Applying ceramic coating over PPF is a popular combination — the ceramic keeps the film cleaner and easier to maintain while the PPF handles physical impact protection.",
+          },
+        ],
+        relatedSlugs: ["ppf", "interior-exterior", "headlight-tint"],
+        cardGradient:
+          "linear-gradient(135deg, #081820 0%, #0d2830 60%, #0a1e28 100%)",
+        heroGradient:
+          "linear-gradient(160deg, #040e14 0%, #0a2030 40%, #081820 100%)",
+      },
     ],
   },
 
@@ -359,50 +412,57 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           "linear-gradient(160deg, #040e0a 0%, #0e2018 40%, #081a12 100%)",
       },
       {
-        slug: "signage",
-        name: "Signage",
+        slug: "boats-rvs",
+        name: "Boats & RVs",
         tagline:
-          "Make your business easier to notice with clean, professional signage crafted to be remembered.",
+          "Professional vinyl wraps and styling for marine vessels and recreational vehicles.",
         description: [
-          "From storefront lettering to site signage and branded displays, professional signage helps your business create a strong first impression and stay visible to passing customers. Poor or aging signage undercuts an otherwise strong brand \u2014 sharp signage reinforces it.",
-          "KAR FX Customs produces custom signage for businesses in the Raleigh area and surroundings, including cut vinyl lettering, printed panels, window graphics, and branded displays. Every piece is designed to be clearly legible, visually clean, and durable against outdoor conditions.",
+          "Boats and RVs present some of the most rewarding wrap projects — large surfaces, bold designs, and results that make a real impression on the water or the road. Whether you're refreshing a faded hull, rebranding a charter vessel, or transforming the exterior of a motorhome or travel trailer, vinyl is one of the most versatile and cost-effective options available.",
+          "KAR FX Customs brings the same precision and material standards we use on performance vehicles to every marine and RV project. We work with high-quality vinyl rated for outdoor exposure and UV resistance, ensuring your wrap holds up through seasons of use — not just a summer.",
         ],
-        isB2B: true,
         benefits: [
-          "Creates a strong, professional first impression for customers",
-          "Built for outdoor durability in all weather conditions",
-          "Custom-designed to match your brand visuals",
-          "Increases visibility and walk-in discovery for local businesses",
+          "Transforms the exterior without permanent paint or gelcoat modification",
+          "UV-resistant vinyl rated for extended outdoor and marine exposure",
+          "Full color change, partial graphics, or custom design options available",
+          "Protects the original surface underneath while wrapped",
         ],
         steps: [
           {
-            title: "Brief & Scope",
-            desc: "We discuss your signage needs, location, dimensions, and brand requirements.",
+            title: "Consultation & Design",
+            desc: "We assess the vessel or vehicle, discuss your goals, and plan the wrap design and material selection.",
           },
           {
-            title: "Design & Proof",
-            desc: "We produce a design proof for your review before the process begins.",
+            title: "Surface Prep & Installation",
+            desc: "Surfaces are cleaned and prepped; vinyl is applied panel by panel with precision fitment.",
           },
           {
-            title: "Production & Install",
-            desc: "Signage is developed on professional materials and installed neatly.",
+            title: "Final Inspection",
+            desc: "Every seam, edge, and panel is reviewed with you before the project is handed back.",
           },
         ],
         faq: [
           {
-            q: "What types of signage do you produce?",
-            a: "Cut vinyl lettering, printed window graphics, panel signage, and branded vehicle graphics. Contact us to discuss your specific needs.",
+            q: "Can vinyl hold up on a boat hull?",
+            a: "Yes — marine-grade and cast vinyl products are designed to handle UV exposure, water, and temperature cycles. Proper surface prep is key to long-term adhesion.",
           },
           {
-            q: "How long does outdoor signage last?",
-            a: "Material choice affects lifespan. Our standard outdoor materials are rated 5?7 years. We can discuss options based on your exposure and environment.",
+            q: "Can an RV be fully wrapped?",
+            a: "Absolutely. RVs are a great candidate for full wraps — the large flat surfaces make for clean installs and dramatic transformations.",
+          },
+          {
+            q: "How do I care for a wrapped boat or RV?",
+            a: "Hand washing with mild soap and water is recommended. Avoid pressure washing directly at seams. We'll provide a care guide specific to your wrap at pickup.",
+          },
+          {
+            q: "Can I get a partial wrap or just graphics?",
+            a: "Yes — partial wraps, accent panels, racing stripes, and custom graphics are all available. We can wrap as much or as little as your project requires.",
           },
         ],
-        relatedSlugs: ["commercial-wraps", "color-change-wrap"],
+        relatedSlugs: ["color-change-wrap", "commercial-wraps", "ppf"],
         cardGradient:
-          "linear-gradient(135deg, #10120a 0%, #242814 60%, #161a0c 100%)",
+          "linear-gradient(135deg, #061220 0%, #0d1f3a 60%, #071628 100%)",
         heroGradient:
-          "linear-gradient(160deg, #080a04 0%, #181c0e 40%, #101406 100%)",
+          "linear-gradient(160deg, #030a14 0%, #091830 40%, #061020 100%)",
       },
     ],
   },
@@ -752,6 +812,59 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           "linear-gradient(135deg, #0a1010 0%, #182020 60%, #101818 100%)",
         heroGradient:
           "linear-gradient(160deg, #060c0c 0%, #101c1c 40%, #0c1616 100%)",
+      },
+      {
+        slug: "engine-bay",
+        name: "Engine Bay Detail",
+        tagline:
+          "A clean engine bay looks better, runs cooler, and makes future maintenance easier.",
+        description: [
+          "The engine bay is one of the most overlooked areas on a vehicle — and one of the most impactful when it's done right. Over time, oil residue, road grime, dust, and heat buildup coat every surface under the hood. A professional engine bay detail removes all of it, leaving a clean, presentable engine compartment that reflects well on the care put into the entire vehicle.",
+          "KAR FX Customs approaches engine bay detailing with care — protecting sensitive electrical components, using the right degreasers for the job, and finishing every surface properly. Whether you're prepping for a show, a sale, or just want a cleaner engine compartment, we deliver results that go far beyond a rinse.",
+        ],
+        benefits: [
+          "Removes built-up grease, oil residue, and road grime from all surfaces",
+          "Makes leaks and fluid issues easier to identify after a clean baseline",
+          "Improves the overall presentation of the vehicle — especially for shows or resale",
+          "Plastic, rubber, and metal surfaces dressed and protected after cleaning",
+        ],
+        steps: [
+          {
+            title: "Assessment & Prep",
+            desc: "Sensitive electrical components are protected before any cleaning begins.",
+          },
+          {
+            title: "Degrease & Rinse",
+            desc: "Engine-safe degreaser is applied, agitated, and rinsed to remove built-up contamination.",
+          },
+          {
+            title: "Dress & Dry",
+            desc: "All surfaces are dried thoroughly and plastic, rubber, and metal components are dressed for a clean, finished look.",
+          },
+        ],
+        faq: [
+          {
+            q: "Is engine bay detailing safe for my vehicle?",
+            a: "Yes — when done correctly. We protect electrical components and use appropriate products for the engine environment. It's a standard service we perform regularly.",
+          },
+          {
+            q: "Will it void my warranty?",
+            a: "No. A professional engine bay clean does not void any manufacturer warranty.",
+          },
+          {
+            q: "How long does it take?",
+            a: "Engine bay detailing typically takes 1–2 hours depending on how much buildup is present.",
+          },
+          {
+            q: "Can I get this as an add-on to a full detail?",
+            a: "Yes — engine bay is available as a standalone service or as an add-on to any interior/exterior detail package.",
+          },
+        ],
+        relatedSlugs: ["interior-exterior", "ceramic-coats", "ppf"],
+        cardGradient:
+          "linear-gradient(135deg, #101010 0%, #1c1c1c 60%, #141414 100%)",
+        heroGradient:
+          "linear-gradient(160deg, #080808 0%, #141414 40%, #0e0e0e 100%)",
       },
     ],
   },

@@ -111,6 +111,26 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
     ],
   },
 
+  "protection/ceramic-coats": {
+    hero: GALLERY("bmw-ceramic.jpg"),
+    heroAlt: "Ceramic coating application — hydrophobic gloss finish on vehicle paint",
+    gallery: [
+      {
+        src: GALLERY("bmw-ceramic.jpg"),
+        alt: "BMW with ceramic coating — deep gloss finish in sunlight",
+      },
+      {
+        src: GALLERY("detail-shot-1.jpg"),
+        alt: "Ceramic coated paint surface — water beading close-up",
+        isDetail: true,
+      },
+      {
+        src: GALLERY("paint-correction.jpg"),
+        alt: "Paint decontamination and prep before ceramic coating application",
+      },
+    ],
+  },
+
   // ── WRAPS & STYLING ────────────────────────────────────────────────────────
 
   "wraps-styling/color-change-wrap": {
@@ -167,6 +187,21 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
       {
         src: GALLERY("tarifa-comercial.jpg"),
         alt: "Commercial wrap installation process in shop",
+      },
+    ],
+  },
+
+  "wraps-styling/boats-rvs": {
+    hero: GALLERY("wraps.jpg"),
+    heroAlt: "Vinyl wrap on boat or RV — professional marine and recreational vehicle styling",
+    gallery: [
+      {
+        src: GALLERY("wraps.jpg"),
+        alt: "RV with full color-change wrap — side profile view",
+      },
+      {
+        src: GALLERY("color-change.jpg"),
+        alt: "Custom vinyl wrap on recreational vehicle — front angle",
       },
     ],
   },
@@ -262,6 +297,23 @@ export const SERVICE_IMAGES: Record<string, ServiceImageSet> = {
   },
 
   // ── DETAILING ──────────────────────────────────────────────────────────────
+
+  "detailing/engine-bay": {
+    hero: GALLERY("detail-shot-1.jpg"),
+    heroAlt: "Engine bay detail — clean engine compartment after professional service",
+    gallery: [
+      {
+        src: GALLERY("detail-shot-2.jpg"),
+        alt: "Engine bay before and after — contamination and grime removed",
+        isBeforeAfter: true,
+      },
+      {
+        src: GALLERY("detail-shot-1.jpg"),
+        alt: "Clean engine bay close-up — degreased and dressed surfaces",
+        isDetail: true,
+      },
+    ],
+  },
 
   "detailing/interior-exterior": {
     hero: GALLERY("detail-shot-1.jpg"),
